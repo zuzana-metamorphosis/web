@@ -8,6 +8,7 @@ const articles = [
   { slug: "ritual-pomaly", category: "Rituál", title: "Prečo má pomalé ráno väčšiu silu než dokonalá rutina", excerpt: "Malé gestá, ktoré vracajú pozornosť späť k telu a vlastnému tempu.", image: "/images/skincare-ritual.jpg" },
   { slug: "sila-jednoduchosti", category: "Úvaha", title: "Sila jednoduchosti v každodennej starostlivosti", excerpt: "O tom, čo môžeme z rutiny odobrať, aby v nej zostalo to podstatné.", image: "/images/natural-leaf.jpg" },
   { slug: "metamorfoza", category: "Metamorphosis", title: "Zmena nezačína navonok", excerpt: "Poznámky o vnútornom pohybe, nových začiatkoch a priestore pre seba.", image: "/images/bento-skin-model.jpg" },
+  { slug: "co-je-metamorphosis", category: "Metamorphosis", title: "Čo je Metamorphosis?", excerpt: "Proces prirodzenej premeny, v ktorom staré panciere odpadávajú a rodí sa slobodný motýľ.", image: "/images/hero-model.jpg" },
 ]
 
 export default function BlogPage() {

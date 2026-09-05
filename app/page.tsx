@@ -8,6 +8,7 @@ const articles = [
   { slug: "ritual-pomaly", category: "Rituál", title: "Prečo má pomalé ráno väčšiu silu než dokonalá rutina", excerpt: "Malé gestá, ktoré vracajú pozornosť späť k telu a vlastnému tempu.", image: "/images/skincare-ritual.jpg" },
   { slug: "sila-jednoduchosti", category: "Úvaha", title: "Sila jednoduchosti v každodennej starostlivosti", excerpt: "O tom, čo môžeme z rutiny odobrať, aby v nej zostalo to podstatné.", image: "/images/natural-leaf.jpg" },
   { slug: "metamorfoza", category: "Metamorphosis", title: "Zmena nezačína navonok", excerpt: "Poznámky o vnútornom pohybe, nových začiatkoch a priestore pre seba.", image: "/images/bento-skin-model.jpg" },
+  { slug: "co-je-metamorphosis", category: "Metamorphosis", title: "Čo je Metamorphosis?", excerpt: "Proces prirodzenej premeny, v ktorom staré panciere odpadávajú a rodí sa slobodný motýľ.", image: "/images/hero-model.jpg" },
 ]
 
 export default function HomePage() {
@@ -22,7 +23,7 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <p className="mb-5 text-sm uppercase tracking-[0.3em] text-black/70">Zuzana · Metamorphosis</p>
             <h1 className="font-serif text-5xl leading-[1.05] text-black md:text-7xl">Miesto pre zmenu, ktorá začína vnútri.</h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-black/75">Osobný blog o vedomej starostlivosti, kráse bez tlaku a malých rozhodnutiach, ktoré menia každodennosť.</p>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-black/75">Nestarneš. Len na sebe nosíš nánosy minulosti, potlačených emócií a kŕč v tkanivách.</p>
           </div>
         </div>
       </section>

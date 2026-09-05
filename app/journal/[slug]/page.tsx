@@ -25,6 +25,13 @@ const articles = {
     image: "/images/bento-skin-model.jpg",
     body: "Premena sa často začína skôr otázkou než odpoveďou. Dovolíme si zastaviť, prehodnotiť tempo a nechať starú predstavu o sebe pomaly odísť. Navonok sa možno nič nemení, no vnútri už vzniká nový smer.",
   },
+  "co-je-metamorphosis": {
+    category: "Metamorphosis",
+    title: "Čo je Metamorphosis?",
+    intro: "Nestarneš. Len na sebe nosíš nánosy minulosti, potlačených emócií a kŕč v tkanivách.",
+    image: "/images/hero-model.jpg",
+    body: "Prvým krokom k premene je uvedomiť si, kto naozaj si, a prebrať plnú zodpovednosť za svoje nástroje – myseľ, emócie a telo. Metamorphosis je proces tejto prirodzenej premeny. Najprv sme ako húsenica, no keď sa dáme do ústrania tichej kukly a s Láskou sa venujeme samej sebe, staré panciere odpadávajú, mráz z tváre mizne a rodí sa slobodný motýľ. Vyvrcholením celej mojej práce a tejto premeny je 7 čarovných dní so mnou v Grécku – v priestore, kde sa tvoja vlastná Metamorphosis stáva žitou realitou.",
+  },
 } as const
 
 type ArticleSlug = keyof typeof articles
