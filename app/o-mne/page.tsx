@@ -9,7 +9,7 @@ export default function AboutPage() {
       <section className="px-6 pb-24 pt-40 lg:px-8 lg:pb-32">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-20">
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted">
-            <Image src="/images/hero-model.jpg" alt="Portrét Zuzany Harvalik" fill className="object-cover" priority />
+            <Image src="/Fotky/480785660_624497300225070_1171894858753554870_n.jpg" alt="Portrét Zuzany Harvalik" fill className="object-cover" priority />
           </div>
           <div>
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-primary">O mne</p>

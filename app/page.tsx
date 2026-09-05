@@ -17,7 +17,7 @@ export default function HomePage() {
     <main>
       <Header />
       <section className="relative min-h-screen overflow-hidden bg-[#e3e1e2] pt-32">
-        <Image src="/images/hero-model.jpg" alt="Portrét autorky" fill priority className="object-cover object-center" />
+        <Image src="/Fotky/480785660_624497300225070_1171894858753554870_n.jpg" alt="Portrét autorky" fill priority className="object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-8rem)] max-w-7xl items-end px-6 pb-16 lg:px-8 lg:pb-24">
           <div className="max-w-3xl">
