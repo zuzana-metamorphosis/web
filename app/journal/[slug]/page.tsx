@@ -19,7 +19,7 @@ const articles = {
     body: "Jednoduchosť nie je rezignácia. Je to spôsob, ako si vybrať menej vecí, ktorým dokážeme venovať viac pozornosti. Keď rutina prestane byť zoznamom povinností, môže sa stať tichým miestom návratu k sebe.",
   },
   metamorfoza: {
-    category: "Metamorfóza",
+    category: "Metamorphosis",
     title: "Zmena nezačína navonok",
     intro: "Poznámky o vnútornom pohybe, nových začiatkoch a priestore pre seba.",
     image: "/images/bento-skin-model.jpg",

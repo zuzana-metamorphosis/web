@@ -7,7 +7,7 @@ import { Header } from "@/components/boty/header"
 const articles = [
   { slug: "ritual-pomaly", category: "Rituál", title: "Prečo má pomalé ráno väčšiu silu než dokonalá rutina", excerpt: "Malé gestá, ktoré vracajú pozornosť späť k telu a vlastnému tempu.", image: "/images/skincare-ritual.jpg" },
   { slug: "sila-jednoduchosti", category: "Úvaha", title: "Sila jednoduchosti v každodennej starostlivosti", excerpt: "O tom, čo môžeme z rutiny odobrať, aby v nej zostalo to podstatné.", image: "/images/natural-leaf.jpg" },
-  { slug: "metamorfoza", category: "Metamorfóza", title: "Zmena nezačína navonok", excerpt: "Poznámky o vnútornom pohybe, nových začiatkoch a priestore pre seba.", image: "/images/bento-skin-model.jpg" },
+  { slug: "metamorfoza", category: "Metamorphosis", title: "Zmena nezačína navonok", excerpt: "Poznámky o vnútornom pohybe, nových začiatkoch a priestore pre seba.", image: "/images/bento-skin-model.jpg" },
 ]
 
 export default function HomePage() {
@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-8rem)] max-w-7xl items-end px-6 pb-16 lg:px-8 lg:pb-24">
           <div className="max-w-3xl">
-            <p className="mb-5 text-sm uppercase tracking-[0.3em] text-black/70">Zuzana · Metamorfóza</p>
+            <p className="mb-5 text-sm uppercase tracking-[0.3em] text-black/70">Zuzana · Metamorphosis</p>
             <h1 className="font-serif text-5xl leading-[1.05] text-black md:text-7xl">Miesto pre zmenu, ktorá začína vnútri.</h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-black/75">Osobný blog o vedomej starostlivosti, kráse bez tlaku a malých rozhodnutiach, ktoré menia každodennosť.</p>
           </div>
@@ -57,7 +57,7 @@ export default function HomePage() {
       <section id="about" className="px-6 py-24 lg:px-8 lg:py-32">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1fr_1.2fr] md:items-center">
           <p className="text-sm uppercase tracking-[0.3em] text-primary">O blogu</p>
-          <p className="font-serif text-4xl leading-tight text-foreground md:text-5xl">Metamorfóza nie je cieľ. Je to spôsob, akým sa učíme byť bližšie sami sebe.</p>
+          <p className="font-serif text-4xl leading-tight text-foreground md:text-5xl">Metamorphosis nie je cieľ. Je to spôsob, akým sa učíme byť bližšie sami sebe.</p>
         </div>
       </section>
 

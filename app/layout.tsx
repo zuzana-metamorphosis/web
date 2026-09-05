@@ -18,10 +18,10 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'ZUZANA — Metamorfóza',
+  title: 'ZUZANA — Metamorphosis',
   description: 'Osobný blog o vedomej starostlivosti, kráse bez tlaku a malých rozhodnutiach, ktoré menia každodennosť.',
   generator: 'v0.app',
-  keywords: ['blog', 'metamorfóza', 'starostlivosť', 'rituály', 'krása'],
+  keywords: ['blog', 'metamorphosis', 'starostlivosť', 'rituály', 'krása'],
   icons: {
     icon: [
       {

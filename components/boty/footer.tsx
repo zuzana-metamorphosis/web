@@ -7,7 +7,7 @@ const footerLinks = {
   journal: [
     { name: "Najnovšie články", href: "#journal" },
     { name: "Rituály", href: "#journal" },
-    { name: "Metamorfóza", href: "#journal" },
+    { name: "Metamorphosis", href: "#journal" },
   ],
   about: [
     { name: "O blogu", href: "#about" },
