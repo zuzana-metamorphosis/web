@@ -27,27 +27,15 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            <a
-              href="#journal"
-              className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition"
-              onClick={(e) => {
-                e.preventDefault()
-                document.getElementById('journal')?.scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-              Journal
-            </a>
-            <a
-              href="#about"
-              className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition"
-              onClick={(e) => {
-                e.preventDefault()
-                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-              O blogu
-            </a>
-            <a href="mailto:hello@zuzana.sk" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition">Kontakt</a>
+            <Link href="/blog" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition">
+              Blog
+            </Link>
+            <Link href="/fotky" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition">
+              Fotky
+            </Link>
+            <Link href="/o-mne" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition">
+              O mne
+            </Link>
           </div>
 
           {/* Mobile Actions */}
@@ -63,29 +51,15 @@ export function Header() {
           }`}
         >
           <div className="flex flex-col gap-4 pt-4 border-t border-border/50">
-            <a
-              href="#journal"
-              className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition"
-              onClick={(e) => {
-                e.preventDefault()
-                setIsMenuOpen(false)
-                document.getElementById('journal')?.scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-              Journal
-            </a>
-            <a
-              href="#about"
-              className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition"
-              onClick={(e) => {
-                e.preventDefault()
-                setIsMenuOpen(false)
-                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-              O blogu
-            </a>
-            <a href="mailto:hello@zuzana.sk" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition" onClick={() => setIsMenuOpen(false)}>Kontakt</a>
+            <Link href="/blog" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition" onClick={() => setIsMenuOpen(false)}>
+              Blog
+            </Link>
+            <Link href="/fotky" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition" onClick={() => setIsMenuOpen(false)}>
+              Fotky
+            </Link>
+            <Link href="/o-mne" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition" onClick={() => setIsMenuOpen(false)}>
+              O mne
+            </Link>
           </div>
         </div>
       </nav>
