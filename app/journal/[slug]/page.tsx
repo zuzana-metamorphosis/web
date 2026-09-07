@@ -28,9 +28,14 @@ const articles = {
   "co-je-metamorphosis": {
     category: "Metamorphosis",
     title: "Čo je Metamorphosis?",
-    intro: "Nestarneš. Len na sebe nosíš nánosy minulosti, potlačených emócií a kŕč v tkanivách.",
+    intro: "Metamorphosis je tichý, láskavý zázrak prirodzenej premeny.",
     image: "/images/hero-model.jpg",
-    body: "Prvým krokom k premene je uvedomiť si, kto naozaj si, a prebrať plnú zodpovednosť za svoje nástroje – myseľ, emócie a telo. Metamorphosis je proces tejto prirodzenej premeny. Najprv sme ako húsenica, no keď sa dáme do ústrania tichej kukly a s Láskou sa venujeme samej sebe, staré panciere odpadávajú, mráz z tváre mizne a rodí sa slobodný motýľ. Vyvrcholením celej mojej práce a tejto premeny je 7 čarovných dní so mnou v Grécku – v priestore, kde sa tvoja vlastná Metamorphosis stáva žitou realitou.",
+    body: [
+      "Metamorphosis je tichý, láskavý zázrak prirodzenej premeny.",
+      "Všetky sme najprv ako húsenice, ktoré si na sebe nesú ťažobu sveta, emócie a kŕč minulosti. Aby však mohol prísť zázrak, potrebujeme sa na chvíľu dať do ústrania – vojsť do tichej, bezpečnej kukly, stíšiť svet okolo a s Láskou sa plne venovať sama sebe.",
+      "V tomto posvätnom priestore kukly sa spúšťa hlboká vnútorná premena. Učíš sa s ľahkosťou a vedomím oddeliť od svojich nástrojov – od mysle, emócií aj tela – a s láskavou zodpovednosťou ich prebrať do vlastných rúk. Rozpúšťa sa mráz z tváre, odchádza starý pancier a z tejto tichej hĺbky sa konečne rodí slobodný motýľ. Tvoja tvár sa rozjasňuje, telo sa oslobodzuje a ty sa vraciaš do svojej pravej podstaty.",
+      "Vyvrcholením celej mojej práce a tohto posvätného procesu je 7 čarovných dní so mnou v Grécku – v priestore, kde sa tvoja vlastná Metamorphosis stáva žitou realitou.",
+    ],
   },
 } as const
 
@@ -59,7 +64,9 @@ export default async function JournalArticle({ params }: { params: Promise<{ slu
           <Image src={article.image} alt="" fill className="object-cover px-6 lg:px-8" priority />
         </div>
         <div className="mx-auto max-w-2xl px-6 py-16 lg:py-24">
-          <p className="text-xl leading-relaxed text-foreground md:text-2xl">{article.body}</p>
+          <div className="space-y-6 text-xl leading-relaxed text-foreground md:text-2xl">
+            {Array.isArray(article.body) ? article.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{article.body}</p>}
+          </div>
         </div>
       </article>
       <Footer />
