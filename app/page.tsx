@@ -5,10 +5,10 @@ import { Footer } from "@/components/boty/footer"
 import { Header } from "@/components/boty/header"
 
 const articles = [
-  { slug: "ritual-pomaly", category: "Rituál", title: "Prečo má pomalé ráno väčšiu silu než dokonalá rutina", excerpt: "Malé gestá, ktoré vracajú pozornosť späť k telu a vlastnému tempu.", image: "/images/skincare-ritual.jpg" },
-  { slug: "sila-jednoduchosti", category: "Úvaha", title: "Sila jednoduchosti v každodennej starostlivosti", excerpt: "O tom, čo môžeme z rutiny odobrať, aby v nej zostalo to podstatné.", image: "/images/natural-leaf.jpg" },
-  { slug: "metamorfoza", category: "Metamorphosis", title: "Zmena nezačína navonok", excerpt: "Poznámky o vnútornom pohybe, nových začiatkoch a priestore pre seba.", image: "/images/bento-skin-model.jpg" },
-  { slug: "co-je-metamorphosis", category: "Metamorphosis", title: "Čo je Metamorphosis?", excerpt: "Proces prirodzenej premeny, v ktorom staré panciere odpadávajú a rodí sa slobodný motýľ.", image: "/images/hero-model.jpg" },
+  { slug: "ritual-pomaly", category: "Rituál", title: "Prečo má pomalé ráno väčšiu silu než dokonalá rutina", excerpt: "Malé gestá, ktoré vracajú pozornosť späť k telu a vlastnému tempu." },
+  { slug: "sila-jednoduchosti", category: "Úvaha", title: "Sila jednoduchosti v každodennej starostlivosti", excerpt: "O tom, čo môžeme z rutiny odobrať, aby v nej zostalo to podstatné." },
+  { slug: "metamorfoza", category: "Metamorphosis", title: "Zmena nezačína navonok", excerpt: "Poznámky o vnútornom pohybe, nových začiatkoch a priestore pre seba." },
+  { slug: "co-je-metamorphosis", category: "Metamorphosis", title: "Čo je Metamorphosis?", excerpt: "Proces prirodzenej premeny, v ktorom staré panciere odpadávajú a rodí sa slobodný motýľ." },
 ]
 
 export default function HomePage() {
@@ -41,9 +41,6 @@ export default function HomePage() {
             {articles.map((article) => (
               <Link key={article.slug} href={`/journal/${article.slug}`} className="group">
                 <article>
-                  <div className="relative mb-6 aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
-                    <Image src={article.image} alt="" fill className="object-cover transition duration-700 group-hover:scale-105" />
-                  </div>
                   <p className="mb-3 text-xs uppercase tracking-[0.25em] text-primary">{article.category}</p>
                   <h3 className="font-serif text-2xl leading-tight text-foreground transition group-hover:text-primary">{article.title}</h3>
                   <p className="mt-3 leading-relaxed text-muted-foreground">{article.excerpt}</p>
