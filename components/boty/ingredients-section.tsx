@@ -111,7 +111,7 @@ export function IngredientsSection() {
               Pure Ingredients
             </span>
             <h2 className="font-serif text-5xl leading-tight text-white mb-6 text-balance md:text-8xl">
-              Nature's finest,
+              Nature&apos;s finest,
               <br />
               for your skin.
             </h2>

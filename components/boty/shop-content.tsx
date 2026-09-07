@@ -42,9 +42,12 @@ export function ShopContent({ products }: { products: Product[] }) {
   }, [])
 
   useEffect(() => {
-    setIsVisible(false)
-    const timer = setTimeout(() => setIsVisible(true), 50)
-    return () => clearTimeout(timer)
+    const hideTimer = setTimeout(() => setIsVisible(false), 0)
+    const showTimer = setTimeout(() => setIsVisible(true), 50)
+    return () => {
+      clearTimeout(hideTimer)
+      clearTimeout(showTimer)
+    }
   }, [selectedCategory])
 
   return (

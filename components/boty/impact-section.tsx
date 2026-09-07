@@ -129,7 +129,7 @@ export function ImpactSection() {
             Beauty with purpose.
           </h2>
           <p className={`text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.6s', animationFillMode: 'forwards' } : {}}>
-            We're committed to making a positive impact on the planet and the people who call it home.
+            We&apos;re committed to making a positive impact on the planet and the people who call it home.
             Every purchase supports sustainable practices and ethical partnerships.
           </p>
         </div>
@@ -164,9 +164,9 @@ export function ImpactSection() {
           <div>
             {/* Quote */}
             <div className="p-8 lg:p-12 lg:px-16 max-w-4xl mx-auto text-center">
-              <div className="text-6xl text-primary mb-6 font-serif">"</div>
+              <div className="text-6xl text-primary mb-6 font-serif">&quot;</div>
               <blockquote className="font-serif text-2xl lg:text-3xl text-foreground leading-relaxed mb-6">
-                Skincare shouldn't cost the earth. We believe in creating products that nourish your skin 
+                Skincare shouldn&apos;t cost the earth. We believe in creating products that nourish your skin
                 while protecting the planet for future generations.
               </blockquote>
               <footer className="text-muted-foreground">
