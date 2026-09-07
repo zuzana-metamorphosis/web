@@ -82,7 +82,7 @@ export default function AboutPage() {
           <h2 className="font-serif text-4xl text-foreground md:text-6xl">ZuzanaHarvalik.com</h2>
           <div className="mt-12 grid gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3">
             {[
-              "E-book Bezpečná krása",
+              "E-book Bezpečie je nová krása",
               "Online kurzy EL metódy",
               "Víkendový Mini Metamorphosis (Slovensko)",
               "7-dňový Metamorphosis (Grécko)",

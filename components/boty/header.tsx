@@ -31,17 +31,16 @@ export function Header() {
               Blog
             </Link>
             <Link href="/fotky" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition">
-              Fotky
+              Fotky a videá
             </Link>
             <Link href="/o-mne" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition">
               O mne
             </Link>
+            <Link href="/kontakt" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition">
+              Kontakt
+            </Link>
           </div>
 
-          {/* Mobile Actions */}
-          <div className="flex lg:hidden items-center gap-4 ml-auto">
-            <a href="mailto:hello@zuzana.sk" className="text-sm text-foreground/70">Kontakt</a>
-          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -55,10 +54,13 @@ export function Header() {
               Blog
             </Link>
             <Link href="/fotky" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition" onClick={() => setIsMenuOpen(false)}>
-              Fotky
+              Fotky a videá
             </Link>
             <Link href="/o-mne" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition" onClick={() => setIsMenuOpen(false)}>
               O mne
+            </Link>
+            <Link href="/kontakt" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition" onClick={() => setIsMenuOpen(false)}>
+              Kontakt
             </Link>
           </div>
         </div>

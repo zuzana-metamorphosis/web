@@ -1,18 +1,15 @@
 "use client"
 
 import Link from "next/link"
-import { Instagram, Facebook, Twitter } from "lucide-react"
+import { Instagram, Facebook } from "lucide-react"
 
 const footerLinks = {
-  journal: [
-    { name: "Najnovšie články", href: "#journal" },
-    { name: "Rituály", href: "#journal" },
-    { name: "Metamorphosis", href: "#journal" },
+  navigation: [
+    { name: "Blog", href: "/blog" },
+    { name: "Fotky a videá", href: "/fotky" },
+    { name: "O mne", href: "/o-mne" },
+    { name: "Kontakt", href: "/kontakt" },
   ],
-  about: [
-    { name: "O blogu", href: "#about" },
-    { name: "Kontakt", href: "mailto:hello@zuzana.sk" },
-  ]
 }
 
 export function Footer() {
@@ -21,7 +18,7 @@ export function Footer() {
       {/* Giant Background Text */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0">
         <span className="font-serif text-[200px] sm:text-[200px] md:text-[400px] lg:text-[400px] xl:text-[400px] font-bold text-white/20 whitespace-nowrap leading-none">
-          AMBER
+          Metamorphosis
         </span>
       </div>
       
@@ -29,13 +26,13 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <h2 className="font-serif text-3xl text-foreground mb-4">AMBER</h2>
+            <h2 className="font-serif text-3xl text-foreground mb-4">Metamorphosis</h2>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
               Osobné poznámky o kráse, starostlivosti a premene bez tlaku na dokonalosť.
             </p>
             <div className="flex gap-4">
               <a
-                href="https://x.com/Kerroudjm"
+                href="https://www.instagram.com/meta_morphos_is/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/60 hover:text-foreground boty-transition boty-shadow"
@@ -44,7 +41,7 @@ export function Footer() {
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://x.com/Kerroudjm"
+                href="https://www.facebook.com/people/Zuzana-Harvalik-Bujdakova/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/60 hover:text-foreground boty-transition boty-shadow"
@@ -52,40 +49,14 @@ export function Footer() {
               >
                 <Facebook className="w-4 h-4" />
               </a>
-              <a
-                href="https://x.com/Kerroudjm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background flex items-center justify-center text-foreground/60 hover:text-foreground boty-transition boty-shadow"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-4 h-4" />
-              </a>
             </div>
           </div>
 
-          {/* Shop Links */}
+          {/* Main Navigation */}
           <div>
-            <h3 className="font-medium text-foreground mb-4">Journal</h3>
+            <h3 className="font-medium text-foreground mb-4">Menu</h3>
             <ul className="space-y-3">
-              {footerLinks.journal.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground boty-transition"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* About Links */}
-          <div>
-            <h3 className="font-medium text-foreground mb-4">About</h3>
-            <ul className="space-y-3">
-              {footerLinks.about.map((link) => (
+              {footerLinks.navigation.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -104,7 +75,7 @@ export function Footer() {
         <div className="pt-10 border-t border-border/50">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} AMBER. All rights reserved.
+              © {new Date().getFullYear()} Metamorphosis. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link href="/" className="text-sm text-muted-foreground hover:text-foreground boty-transition">

@@ -8,6 +8,10 @@ const articles = [
   { slug: "sila-jednoduchosti", category: "Úvaha", title: "Sila jednoduchosti v každodennej starostlivosti", excerpt: "O tom, čo môžeme z rutiny odobrať, aby v nej zostalo to podstatné." },
   { slug: "metamorfoza", category: "Metamorphosis", title: "Zmena nezačína navonok", excerpt: "Poznámky o vnútornom pohybe, nových začiatkoch a priestore pre seba." },
   { slug: "co-je-metamorphosis", category: "Metamorphosis", title: "Čo je Metamorphosis?", excerpt: "Proces prirodzenej premeny, v ktorom staré panciere odpadávajú a rodí sa slobodný motýľ." },
+  { slug: "zazrak-v-luxemburskych-zahradach", category: "Príbeh", title: "Zázrak v Luxemburských záhradách: Keď ťa chráni tvoja vlastná frekvencia", excerpt: "O zabudnutej luxusnej taške v srdci Paríža, trojhodinovom odstupe, hmatateľnom dôkaze vnútornej ochrany a srdci na oblohe." },
+  { slug: "zazrak-na-mori", category: "Príbeh", title: "Zázrak na mori: Keď sa modlitba stáva frekvenciou a spevom", excerpt: "O trvalom rešpekte k prírode, speve Hallelujah na jednom paddleboarde so Simi a kŕdli divokých delfínov, ktorí nás v bezpečí odprevádzali k brehu." },
+  { slug: "ranne-prebudenie-nastrojov", category: "Rituál", title: "Ranné prebudenie nástrojov: Spomeň si, kým naozaj si", excerpt: "O tom, ako hneď po prebudení usmerniť svoju pozornosť, uzavrieť zlatý stĺp, zastaviť príbehy mysle a vstať s vedomým úsmevom." },
+  { slug: "navrat-k-sebe", category: "Úvaha", title: "Návrat k sebe: Otázky, ktoré menia vnímanie života", excerpt: "Zamyslenie nad tým, prečo sme sa odpojili od prirodzených zákonitostí tela, prečo hľadáme odpovede vonku a aký pokoj nastane, keď znova preberieme zodpovednosť za svoj vnútorný svet." },
 ]
 
 export default function BlogPage() {
