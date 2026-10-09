@@ -1,6 +1,16 @@
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
+import { productsData } from "@/lib/products-data"
+import { ProgramDetailView } from "@/components/boty/program-detail-view"
 
-export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
-  void params
-  notFound()
+export function generateStaticParams() {
+  return productsData.map((p) => ({ id: p.slug }))
+}
+
+export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const product = productsData.find((p) => p.slug === id || p.id === id)
+
+  if (!product) notFound()
+
+  return <ProgramDetailView product={product} />
 }

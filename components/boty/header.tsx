@@ -27,6 +27,9 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
+            <Link href="/shop" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition">
+              Programy & E-shop
+            </Link>
             <Link href="/blog" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition">
               Blog
             </Link>
@@ -46,10 +49,13 @@ export function Header() {
         {/* Mobile Navigation */}
         <div
           className={`lg:hidden overflow-hidden boty-transition ${
-            isMenuOpen ? "max-h-64 pb-6" : "max-h-0"
+            isMenuOpen ? "max-h-80 pb-6" : "max-h-0"
           }`}
         >
           <div className="flex flex-col gap-4 pt-4 border-t border-border/50">
+            <Link href="/shop" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition" onClick={() => setIsMenuOpen(false)}>
+              Programy & E-shop
+            </Link>
             <Link href="/blog" className="text-sm tracking-wide text-foreground/70 hover:text-foreground boty-transition" onClick={() => setIsMenuOpen(false)}>
               Blog
             </Link>

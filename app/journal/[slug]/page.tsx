@@ -239,9 +239,129 @@ const articles: Record<string, ArticleData> = {
   "sila-jednoduchosti": {
     sk: {
       category: "Úvaha",
-      title: "Sila jednoduchosti v každodennej starostlivosti",
-      intro: "O tom, čo môžeme z rutiny odobrať, aby v nej zostalo to podstatné.",
-      body: "Jednoduchosť nie je rezignácia. Je to spôsob, ako si vybrať menej vecí, ktorým dokážeme venovať viac pozornosti. Keď rutina prestane byť zoznamom povinností, môže sa stať tichým miestom návratu k sebe.",
+      title: "Sila jednoduchosti v každodenných rituáloch",
+      intro: "Nejde o to pridávať do svojho dňa ďalšie a ďalšie povinnosti. Ide o to rozhodnúť sa, čo môžeme z rutiny odobrať, aby v nej zostalo len to podstatné. Jednoduchosť nie je rezignácia. Je to spôsob, ako si vybrať menej vecí, ktorým dokážeme venovať viac pozornosti.",
+      sections: [
+        {
+          paragraphs: [
+            "Keď rutina prestane byť zoznamom povinností, môže sa stať tichým miestom návratu k sebe.",
+            "Skutočný rituál vás neučí nič úplne nové. Nie je to naučená povinnosť, ale láskavé rozpomínanie sa na váš prirodzený stav bytia – na to, čo sme cestou zabudli. A práve v tomto rozpamätávaní sa skrýva naše uzdravenie.",
+          ],
+        },
+        {
+          heading: "Tvoja pozornosť: To najdôležitejšie sa deje v skrytosti",
+          paragraphs: [
+            "To najdôležitejšie vo vašom živote sa deje vo chvíľach, keď vás nikto nevidí. Nevyžaduje si to žiadne veľké gestá pre vonkajší svet. Znamená to len presunúť svoju pozornosť z vonkajších ruchov späť do svojho vnútorného priestoru.",
+            "Vezmite si znova vedome pod kontrolu svoje nástroje – svoje telo, svoj dych a svoje postavenie:",
+            "• Kde máte jazyk? Leží jemne na hornom podnebí?",
+            "• Aké napätie držíte v tvári, v pleciach alebo v panve? Je vaša panva uvoľnená, alebo v kŕči?",
+            "• Ako stojíte a chodíte? Ako sa vaše prsty na nohách dotýkajú zeme? Pod akým uhlom stojí vaša hlava na krku?",
+            "Týmito jednoduchými a jasnými krokmi uvedomovania si tela si odrazu začnete uvedomovať ďalšiu úroveň: svoje myšlienky.",
+          ],
+        },
+        {
+          heading: "Myšlienky sú ako oblaky – Ty si Nebo",
+          paragraphs: [
+            "Keď prichádzajú myšlienky, uvedom si: Ty nie si svoje myšlienky a myšlienky nie sú realita.",
+            "Myšlienky vytvára myseľ. Tvoja myseľ je presne taká stará ako ty. Tvoja intuícia je však nekonečná, nesmrteľná a prichádza z ducha.",
+            "Ak prichádzajú negatívne myšlienky, odpovedz jednoduchou fyziologickou korekciou:",
+          ],
+          list: [
+            {
+              title: "1. Zľahka sa usmej",
+              text: "Daj kútiky úst jemne nahor (nie do strán k ušiam, ale nahor).",
+            },
+            {
+              title: "2. Jazyk daj na podnebie a uvoľni panvu",
+              text: "Polož jazyk na horné podnebie a úplne uvoľni celú panvovú oblasť.",
+            },
+            {
+              title: "3. Staň sa pozorovateľom",
+              text: "Predstav si, že tvoje myšlienky sú len oblaky na oblohe. Ty si Nebo. Nechaj oblaky len prejsť. Nevstupuj do nich, nestotožňuj sa s nimi. Je len na tebe, či do nich vložíš svoju energiu a pocit, alebo ich necháš voľne odplávať.",
+            },
+          ],
+        },
+        {
+          heading: "Múdrosť Brucea Leeho: Presun energie z hlavy do brucha",
+          paragraphs: [
+            "Ako hovoril aj Bruce Lee: Keď svoju pozornosť presunieš z hlavy a mysle do svojho brucha, tvoje telo jednoducho nemá takú kapacitu energie, aby živilo neustále myšlienkové špirály.",
+            "Energia sa stiahne z mysle a tvoja pozornosť sa prirodzene sústredí na tvoju hlbokú intuíciu a správny dych. V tom momente sa tvoje telo vracia do prirodzeného stavu pokoja a zapína sa parasympatikus.",
+          ],
+        },
+        {
+          heading: "Emócie sú len elektrina: 90-sekundové tajomstvo",
+          paragraphs: [
+            "Ani emócií sa nemusíš obávať. Veda dnes potvrdzuje to, čo dávna múdrosť už dlho vie: Emócia je z fyziologického hľadiska len elektrický impulz – čisto energia v pohybe.",
+            "Jej trvanie v našom tele je len 60 až maximálne 90 sekúnd.",
+            "Keď prichádza silná emócia: vedome uvoľni panvu, daj jazyk na podnebie a začni dýchať bránicou.",
+            "Ak zostane panva uvoľnená, emócia cez teba len prejde ako elektrický prúd. Neostane v tebe v podobe kŕča či blokády, ale cez nohy sa prirodzene uzemní v zemi.",
+          ],
+          callout: "„V tej chvíli si voľná. Si späť vo svojom prirodzenom stave bytia.“",
+        },
+      ],
+    },
+    de: {
+      category: "Betrachtung",
+      title: "Die Kraft der Einfachheit in der täglichen Selbstfürsorge",
+      intro: "Es geht nicht darum, neue Pflichten zu deiner Routine hinzuzufügen. Es geht darum zu entscheiden, was du weglassen kannst, damit nur das Wesentliche bleibt. Einfachheit ist keine Resignation. Es ist die bewusste Wahl für weniger Dinge, denen wir dafür unsere volle Aufmerksamkeit schenken.",
+      sections: [
+        {
+          paragraphs: [
+            "Wenn eine Routine aufhört, eine bloße To-do-Liste zu sein, wird sie zu einem stillen Ort der Rückkehr zu dir selbst.",
+            "Ein wahres Ritual lehrt dich nichts gänzlich Neues. Es ist kein angelernter Zwang, sondern ein liebevolles Sich-Erinnern an deinen natürlichen Zustand des Seins – an das, was wir auf dem Weg vergessen haben. Genau in diesem Sich-Erinnern liegt unsere Heilung.",
+          ],
+        },
+        {
+          heading: "Deine Aufmerksamkeit: Das Wichtigste geschieht im Verborgenen",
+          paragraphs: [
+            "Das Wichtigste in deinem Leben geschieht in den Momenten, in denen dich niemand sieht. Es erfordert keine großen Gesten für die äußere Welt. Es bedeutet lediglich, deine Aufmerksamkeit von den äußeren Reizen zurück in deinen inneren Raum zu lenken.",
+            "Nimm wieder bewusst die Kontrolle über deine Werkzeuge ein – über deinen Körper, deinen Atem und deine Haltung:",
+            "• Wo befindet sich deine Zunge? Liegt sie sanft am oberen Gaumen?",
+            "• Welche Spannung trägst du im Gesicht, in den Schultern oder im Becken? Ist dein Becken entspannt oder verkrampft?",
+            "• Wie stehst und gehst du? Wie berühren deine Zehen den Boden? In welchem Winkel ruht dein Kopf auf deinem Hals?",
+            "Durch diese einfachen, klaren Schritte der Körperwahrnehmung wirst du dir plötzlich einer weiteren Ebene bewusst: deinen Gedanken.",
+          ],
+        },
+        {
+          heading: "Gedanken sind wie Wolken – Du bist der Himmel",
+          paragraphs: [
+            "Wenn Gedanken auftauchen, erkenne sofort: Du bist nicht deine Gedanken, und Gedanken sind nicht die Realität.",
+            "Gedanken werden vom Verstand erschaffen. Dein Verstand ist genau so alt wie du. Deine Intuition hingegen ist unendlich, unsterblich und entspringt deinem wahren Geist.",
+            "Sollten negative Gedanken aufziehen, reagiere mit einer einfachen physiologischen Korrektur:",
+          ],
+          list: [
+            {
+              title: "1. Schenke dir ein sanftes Lächeln",
+              text: "Ziehe deine Mundwinkel leicht nach oben (nicht seitlich zu den Ohren, sondern bewusst nach oben).",
+            },
+            {
+              title: "2. Lege die Zunge an den Gaumen und entspanne dein Becken vollständig",
+              text: "Lege die Zunge sanft an den Gaumen und lasse alle Anspannung aus dem Beckenbereich los.",
+            },
+            {
+              title: "3. Werde zum Beobachter",
+              text: "Stelle dir vor, deine Gedanken sind nur Wolken am Himmel. Du bist der Himmel. Lass die Wolken einfach vorbeiziehen. Steige nicht in sie ein und identifiziere dich nicht mit ihnen. Es liegt ganz bei dir, ob du Energie und Gefühle in einen Gedanken investierst oder ihn weiterziehen lässt.",
+            },
+          ],
+        },
+        {
+          heading: "Die Weisheit von Bruce Lee: Die Energie vom Kopf in den Bauch lenken",
+          paragraphs: [
+            "Wie Bruce Lee einst beschrieb: Wenn du deine Aufmerksamkeit aus dem Verstand hinunter in deinen Bauch lenkst, hat dein Körper schlichtweg nicht mehr die Kapazität, verkopfte Gedankenschleifen mit Energie zu füttern.",
+            "Die Energie zieht sich aus dem Verstand zurück und dein Fokus wandert ganz automatisch zu deiner tiefen Intuition und deinem natürlichen Atem. In diesem Moment schaltet dein Nervensystem auf den Parasympathikus um – den Zustand von tiefem Frieden und Ruhe.",
+          ],
+        },
+        {
+          heading: "Gefühle sind nur Elektrizität: Das 90-Sekunden-Geheimnis",
+          paragraphs: [
+            "Auch vor deinen Emotionen brauchst du keine Angst zu haben. Die Wissenschaft bestätigt heute, was die alte Weisheit längst weiß: Eine Emotion ist physiologisch betrachtet nur ein elektrischer Impuls – reine Energie in Bewegung.",
+            "Ihre Lebensdauer im Körper beträgt lediglich 60 bis maximal 90 Sekunden.",
+            "Wenn eine intensive Emotion aufsteigt: Entspanne bewusst dein Becken, lege die Zunge an den Gaumen und atme tief durch das Zwerchfell.",
+            "Wenn dein Becken entspannt bleibt, zieht die Emotion wie ein elektrischer Strom einfach durch dich hindurch. Sie nistet sich nicht als Blockade im Gewebe ein, sondern fließt sanft über deine Füße ab und erdet sich im Boden.",
+          ],
+          callout: "„In diesem Moment bist du frei. Du bist zurück in deinem natürlichen Zustand des Seins.“",
+        },
+      ],
     },
   },
   metamorfoza: {
@@ -255,13 +375,106 @@ const articles: Record<string, ArticleData> = {
   "co-je-metamorphosis": {
     sk: {
       category: "Metamorphosis",
-      title: "Čo je Metamorphosis?",
-      intro: "Metamorphosis je tichý, láskavý zázrak prirodzenej premeny.",
-      body: [
-        "Metamorphosis je tichý, láskavý zázrak prirodzenej premeny.",
-        "Všetky sme najprv ako húsenice, ktoré si na sebe nesú ťažobu sveta, emócie a kŕč minulosti. Aby však mohol prísť zázrak, potrebujeme sa na chvíľu dať do ústrania – vojsť do tichej, bezpečnej kukly, stíšiť svet okolo a s Láskou sa plne venovať sama sebe.",
-        "V tomto posvätnom priestore kukly sa spúšťa hlboká vnútorná premena. Učíš sa s ľahkosťou a vedomím oddeliť od svojich nástrojov – od mysle, emócií aj tela – a s láskavou zodpovednosťou ich prebrať do vlastných rúk. Rozpúšťa sa mráz z tváre, odchádza starý pancier a z tejto tichej hĺbky sa konečne rodí slobodný motýľ. Tvoja tvár sa rozjasňuje, telo sa oslobodzuje a ty sa vraciaš do svojej pravej podstaty.",
-        "Vyvrcholením celej mojej práce a tohto posvätného procesu je 7 čarovných dní so mnou v Grécku – v priestore, kde sa tvoja vlastná Metamorphosis stáva žitou realitou.",
+      title: "Metamorfóza: Tichý zázrak prirodzenej premeny",
+      intro: "Metamorfóza je tichý, pokojný a láskyplný zázrak prirodzenej premeny. Je to rovnaký zázrak, aký pozorujeme v samej prírode.",
+      sections: [
+        {
+          paragraphs: [
+            "Keď sa húsenica stiahne do kukly, vytvorí si svoje tiché bezpečie. Stíši svet okolo seba, odíde do ústrania a až vtedy nájde silu, priestor a čas na to, aby zo seba sňala všetku ťažobu sveta – všetky zadržané emócie, kŕče a nánosy minulosti. Je to posvätný priestor a luxus, ktorý si daruje sama pre seba.",
+            "Keď sa do tej kukly zahaľuje, ešte netuší, kým v skutočnosti je. Do ústrania vstupuje ako stará húsenica. No práve v tom tichu a zastavení sa z nej stáva očarujúca bytosť – nádherný, farebný motýľ, ktorý svojou krásou zdobí túto zem.",
+            "Tento zázrak prírody nosí každý z nás vo vlastných rukách. Stačí, ak si dovolíme ten luxus stiahnuť sa z vonkajšieho hlučného sveta do svojho vnútorného ticha. Ak si opäť dovolíme rozoznávať tie dva hlasy v našom vnútri a rozpomenúť sa na to, kým naozaj sme.",
+            "Metamorfóza je hlboká dôvera. Dôvera v to, že všetko je presne tak, ako má byť, a že náš život máme vo vlastných rukách.",
+            "Keď na chvíľu opustíme vonkajší svet a vstúpime dovnútra, spoznáme pravdu: sme Tvorcovia. Sme majitelia svojich nástrojov – svojho tela, svojich myšlienky a svojich pocitov. Keď si dovolíme zňať zo svojich pliec všetky problémy a minulosť, keď uvoľníme zo svojho systému každú emóciu, slovo či akciu, ktorú sme kedykoľvek zadržali... vtedy si spomenieme.",
+          ],
+          callout: "„Vtedy sa začína ten pravý, čistý stav bytia.“",
+        },
+        {
+          heading: "Tvoja 7-dňová Metamorfóza na Peloponéze",
+          paragraphs: [
+            "Presne takýto priestor pre tvoju vlastnú premenu spolu vytvárame počas 7-dňového transformačného pobytu Metamorphosis so Zuzanou a Smile Yogou.",
+            "V očarujúcom a pokojnom prostredí gréckeho Peloponézu, v čarovnom štvorhviezdičkovom boutique hoteli White Donkey, teba aj tvoje telo citlivo sprevádzam celým týmto procesom návratu k sebe.",
+          ],
+          subheading: "Ako vyzerá táto cesta znovuzrodenia?",
+          list: [
+            {
+              title: "7 dní, 7 čakier, 7 nových návykov",
+              text: "Každý deň venujeme hlbokej očiste a prebudeniu jedného energetického centra.",
+            },
+            {
+              title: "Smile Yoga & Meditácia",
+              text: "Každé ráno začíname jogou špeciálne zostavenou pre danú čakru a osobnou sprevádzanou meditáciou.",
+            },
+            {
+              title: "Workshopy & Praktická anatómia",
+              text: "Ponoríme sa do praktického výcviku anatómie chôdze a kostrčovo-panvového dýchania.",
+            },
+            {
+              title: "Nedotknutá príroda & Výlety",
+              text: "Súčasťou programu sú nezabudnuteľné výlety do panenskej prírody Peloponézu, kde načerpáme čistú energiu a pokoj.",
+            },
+          ],
+          paragraphs: [
+            "Počas celého týždňa si hlboko na úrovni tela, mysle aj duše pripomíname to, čo je v živote naozaj dôležité. Po siedmich dňoch ľudia odchádzajú po obrovskej vnútornej zmene – s ľahkosťou v tele, jasom v očiach a schopnosťou vidieť svet úplne inak.",
+            "A za to som z celého srdca vďačná.",
+          ],
+          link: {
+            url: "https://www.whitedonkeyhotel.com",
+            label: "Navštíviť stránku hotela",
+            description: "Boutique Hotel White Donkey, Peloponéz, Grécko",
+          },
+        },
+      ],
+    },
+    de: {
+      category: "Metamorphosis",
+      title: "Metamorphose: Das stille Wunder der natürlichen Wandlung",
+      intro: "Die Metamorphose ist ein stilles, friedvolles und liebevolles Wunder der natürlichen Wandlung. Es ist dasselbe Wunder, das wir in der Natur beobachten.",
+      sections: [
+        {
+          paragraphs: [
+            "Wenn sich die Raupe in ihren Kokon zurückzieht, erschafft sie sich ihren stillen Raum der Sicherheit. Sie bringt die Welt um sich herum zur Ruhe, begibt sich in den Rückzug und findet erst dann die Kraft, den Raum und die Zeit, um die gesamte Last der Welt von sich abzustreifen – all die angestauten Emotionen, die Verkrampfungen und die Ablagerungen der Vergangenheit. Es ist ein heiliger Raum und ein Luxus, den sie sich selbst schenkt.",
+            "Wenn sie sich in diesen Kokon hüllt, ahnt sie noch nicht, wer sie in Wirklichkeit ist. Sie geht als alte Raupe in die Stille. Doch genau in diesem Rückzug entsteht aus ihr ein zauberhaftes Wesen – ein wunderschöner, farbenfroher Schmetterling, der diese Erde schmückt.",
+            "Dieses Wunder der Natur trägt jeder von uns in den eigenen Händen. Es reicht, wenn wir uns den Luxus erlauben, uns aus der lauten äußeren Welt in unsere innere Stille zurückzuziehen. Wenn wir uns wieder erlauben, die zwei Stimmen in unserem Inneren zu unterscheiden und uns daran zu erinnern, wer wir wirklich sind.",
+            "Metamorphose ist tiefes Vertrauen. Das Vertrauen darauf, dass alles genau so ist, wie es sein soll, und dass wir unser Leben in den eigenen Händen halten.",
+            "Wenn wir für einen Moment die äußere Welt verlassen und nach innen blicken, erkennen wir die Wahrheit: Wir sind Schöpfer. Wir sind die Eigentümer unserer Werkzeuge – unseres Körpers, unserer Gedanken und unserer Gefühle. Wenn wir uns erlauben, all die Probleme und die Vergangenheit von unseren Schultern zu nehmen, wenn wir jede Emotion, jedes Wort und jede Handlung lösen, die wir jemals zurückgehalten haben... genau dann erinnern wir uns wieder.",
+          ],
+          callout: "„Genau dort beginnt der wahre, reine Zustand des Seins.“",
+        },
+        {
+          heading: "Deine 7-tägige Metamorphose auf dem Peloponnes",
+          paragraphs: [
+            "Genau diesen Raum für deine eigene Wandlung kreieren wir gemeinsam während des 7-tägigen Transformations-Retreats Metamorphosis mit Zuzana und Smile Yoga.",
+            "In der zauberhaften und friedvollen Umgebung des griechischen Peloponnes, im wunderschönen 4-Sterne Boutique Hotel White Donkey, begleite ich dich und deinen Körper achtsam durch diesen gesamten Prozess der Rückkehr zu dir selbst.",
+          ],
+          subheading: "Wie sieht dieser Weg der Neugeburt aus?",
+          list: [
+            {
+              title: "7 Tage, 7 Chakren, 7 neue Gewohnheiten",
+              text: "Jeden Tag widmen wir der tiefen Reinigung und Erweckung eines Energiezentrums.",
+            },
+            {
+              title: "Smile Yoga & Meditation",
+              text: "Wir beginnen jeden Morgen mit speziell auf das jeweilige Chakra abgestimmtem Yoga und persönlicher geführter Meditation.",
+            },
+            {
+              title: "Workshops & Praktische Anatomie",
+              text: "Wir tauchen tief ein in das praktische Training der Anatomie des Gehens und der Steißbein-Becken-Atmung.",
+            },
+            {
+              title: "Unberührte Natur & Ausflüge",
+              text: "Teil des Programms sind unvergessliche Ausflüge in die unberührte Natur des Peloponnes, wo wir reine Energie und Stille tanken.",
+            },
+          ],
+          paragraphs: [
+            "Während der gesamten Woche erinnern wir uns tief auf Ebene von Körper, Geist und Seele an das, was im Leben wirklich zählt. Nach sieben Tagen reisen die Menschen nach einer tiefgreifenden inneren Veränderung ab – mit Leichtigkeit im Körper, Klarheit in den Augen und der Fähigkeit, die Welt mit völlig neuen Augen zu sehen.",
+            "Und dafür bin ich von ganzem Herzen dankbar.",
+          ],
+          link: {
+            url: "https://www.whitedonkeyhotel.com",
+            label: "Hotel-Website besuchen",
+            description: "Boutique Hotel White Donkey, Peloponnes, Griechenland",
+          },
+        },
       ],
     },
   },

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ArrowLeft, Globe, Sparkles } from "lucide-react"
+import { ArrowLeft, ExternalLink, Globe, Sparkles } from "lucide-react"
 
 export interface ArticleContent {
   category: string
@@ -15,6 +15,7 @@ export interface ArticleContent {
     list?: { title?: string; text: string }[]
     quote?: { text: string; author?: string }
     callout?: string
+    link?: { url: string; label: string; description?: string }
   }[]
   body?: string | string[]
 }
@@ -150,6 +151,28 @@ export function ArticleReader({ articleData }: { articleData: ArticleData }) {
                 {sec.callout && (
                   <div className="my-6 p-5 sm:p-6 rounded-2xl bg-primary/5 border border-primary/20 text-foreground/90 text-base sm:text-lg leading-relaxed font-serif italic text-center">
                     {sec.callout}
+                  </div>
+                )}
+
+                {sec.link && (
+                  <div className="my-8 p-6 rounded-2xl bg-card border border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-widest text-primary font-medium mb-1">
+                        {lang === "sk" ? "Oficiálna stránka hotela" : "Offizielle Hotel-Website"}
+                      </p>
+                      <p className="text-base text-foreground font-medium">
+                        {sec.link.description || "Boutique Hotel White Donkey, Peloponéz"}
+                      </p>
+                    </div>
+                    <a
+                      href={sec.link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity shrink-0"
+                    >
+                      <span>{sec.link.label}</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
                   </div>
                 )}
               </section>

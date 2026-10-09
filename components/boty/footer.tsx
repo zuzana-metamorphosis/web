@@ -5,6 +5,7 @@ import { Instagram, Facebook } from "lucide-react"
 
 const footerLinks = {
   navigation: [
+    { name: "Programy & E-shop", href: "/shop" },
     { name: "Blog", href: "/blog" },
     { name: "Fotky a videá", href: "/fotky" },
     { name: "O mne", href: "/o-mne" },
