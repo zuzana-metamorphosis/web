@@ -4,7 +4,7 @@ import { Footer } from "@/components/boty/footer"
 import { Header } from "@/components/boty/header"
 
 const articles = [
-  { slug: "ritual-pomaly", category: "Rituál", title: "Prečo má pomalé ráno väčšiu silu než dokonalá rutina", excerpt: "Malé gestá, ktoré vracajú pozornosť späť k telu a vlastnému tempu." },
+  { slug: "ritual-pomaly", category: "Rituál", title: "Ako začať deň v sile Tvorcu: Prečo má malý ranný rituál väčšiu silu než dokonalá rutina", excerpt: "Malý ranný rituál je vedomým pozvaním k sebe. Prehľad 7 krokov od večernej prípravy superfoodu cez Zlatý piest, ázijský podrep až po Oil Pulling a vedomý úsmev." },
   { slug: "sila-jednoduchosti", category: "Úvaha", title: "Sila jednoduchosti v každodennej starostlivosti", excerpt: "O tom, čo môžeme z rutiny odobrať, aby v nej zostalo to podstatné." },
   { slug: "metamorfoza", category: "Metamorphosis", title: "Zmena nezačína navonok", excerpt: "Poznámky o vnútornom pohybe, nových začiatkoch a priestore pre seba." },
   { slug: "co-je-metamorphosis", category: "Metamorphosis", title: "Čo je Metamorphosis?", excerpt: "Proces prirodzenej premeny, v ktorom staré panciere odpadávajú a rodí sa slobodný motýľ." },
