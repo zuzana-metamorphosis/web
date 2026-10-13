@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import { DM_Sans, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { CartProvider } from '@/components/boty/cart-context'
+import { SearchProvider } from '@/components/boty/search-context'
+import { SearchDialog } from '@/components/boty/search-dialog'
 import './globals.css'
 
 const dmSans = DM_Sans({ 
@@ -54,10 +56,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dmSans.variable} ${playfairDisplay.variable} font-sans antialiased`}>
         <CartProvider>
-          {children}
+          <SearchProvider>
+            {children}
+            <SearchDialog />
+          </SearchProvider>
         </CartProvider>
         <Analytics />
       </body>
     </html>
   )
 }
+

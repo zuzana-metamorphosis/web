@@ -10,6 +10,7 @@ const footerLinks = {
     { name: "Fotky a videá", href: "/fotky" },
     { name: "O mne", href: "/o-mne" },
     { name: "Kontakt", href: "/kontakt" },
+    { name: "Hľadať na webe (Lupa)", href: "/search" },
   ],
 }
 
