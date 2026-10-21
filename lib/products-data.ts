@@ -8,6 +8,31 @@ export interface ProductItem {
   image: string
   price?: number
   currencyCode?: string
+  video?: {
+    url: string
+    title?: string
+    poster?: string
+  }
+  contact?: {
+    email?: string
+    facebook?: string
+    facebookName?: string
+    instagram?: string
+    instagramName?: string
+  }
+  schedule?: {
+    day: string
+    title: string
+    items: {
+      timeOrIcon?: string
+      title: string
+      description: string
+    }[]
+  }[]
+  bonus?: {
+    title: string
+    description: string
+  }
   sk: {
     title: string
     subtitle: string
@@ -85,6 +110,162 @@ export const productsData: ProductItem[] = [
     },
   },
   {
+    id: "mini-metamorphosis-slovensko",
+    slug: "mini-metamorphosis-slovensko",
+    category: "retreat",
+    badge: "Najbližší termín · 20. – 22. 11. 2026",
+    image: "/Fotky/IMG_7721.JPG",
+    video: {
+      url: "/images/hero-amber.mp4",
+      title: "Atmosféra pokoja, bezpečia a somatického uvoľnenia",
+      poster: "/Fotky/IMG_7721.JPG",
+    },
+    contact: {
+      email: "zuzanab@gmx.at",
+      facebook: "https://www.facebook.com/people/Zuzana-Harvalik-Bujdakova/",
+      facebookName: "Zuzana Harvalik Bujdakova",
+      instagram: "https://www.instagram.com/meta_morphos_is/",
+      instagramName: "@meta_morphos_is",
+    },
+    schedule: [
+      {
+        day: "Piatok",
+        title: "Príchod & Bezpečie",
+        items: [
+          {
+            timeOrIcon: "🌿",
+            title: "Spomalenie nervového systému & Ticho",
+            description: "Začneme spomalením nervového systému, tichom a prvým kontaktom s telom.",
+          },
+          {
+            timeOrIcon: "✨",
+            title: "Vedomie & Telo",
+            description: "Spoznáš, ako tvoje vedomie a telo spolu súvisia a ako trauma vytvára stav prežitia.",
+          },
+        ],
+      },
+      {
+        day: "Sobota",
+        title: "Trauma v tele & Prebudenie k SEBE SAMÉMU",
+        items: [
+          {
+            timeOrIcon: "🌞",
+            title: "Smile Yoga",
+            description: "Ranné uvoľnenie pre reguláciu nervového systému cez jemnosť, dych a prítomnosť.",
+          },
+          {
+            timeOrIcon: "🧘‍♀️",
+            title: "Workshop 1 – Kostrčovo-lonový dych",
+            description: "Naučíme sa kostrčovo-panvové dýchanie, prirodzený dych dieťaťa. Uvoľníme panvové dno a kontrolu, čím definitívne pustíme z tela staré traumy a neprežitú energiu.",
+          },
+          {
+            timeOrIcon: "🔸",
+            title: "Prednáška – Fasciálny systém: pamäť traumy",
+            description: "Odhalíme, ako bolesť, chrbtica, kĺby, skolióza, halux, držanie tela a dokonca VRÁSKY súvisia s tvojím fasciálnym systémom a prečo sú fascie tvojou ochranou, nie chybou.",
+          },
+          {
+            timeOrIcon: "🕊",
+            title: "Meditácia „Prebuď sa k SEBE SAMÉMU“ & Prechádzka",
+            description: "Meditácia „Prebuď sa k SEBE SAMÉMU“ a vedomá uzemňujúca prechádzka lesom.",
+          },
+          {
+            timeOrIcon: "🎶",
+            title: "SOBOTNÝ VRCHOL: Zvukový kúpeľ – koncert Mateja Jurenku",
+            description: "Koncert pre parasympatikus v podaní Mateja Jurenku (v čase výnimočnej konštelácie na Nebi) a následné filozofovanie v strede lesa.",
+          },
+          {
+            timeOrIcon: "📖",
+            title: "Knižná predpremiéra novej knihy Zuzany",
+            description: "Počas víkendu ťa Zuzana obohatí o exkluzívne znalosti z jej novej knihy, ktorej vydanie sa blíži koncom novembra!",
+          },
+        ],
+      },
+      {
+        day: "Nedeľa",
+        title: "Integrácia & Návrat do vlastnej moci",
+        items: [
+          {
+            timeOrIcon: "🌞",
+            title: "Smile Yoga s prvkami EL metódy (Energetic Lifting)",
+            description: "Autorský myofasciálny a neurosomatický tréning, zameraný na prácu s hlbokými fasciálnymi líniami a autonómnym nervovým systémom. Spolu si spomenieme, že krása vychádza zvnútra.",
+          },
+          {
+            timeOrIcon: "🔸",
+            title: "Prednáška – Opustenie role obete",
+            description: "Preberieme zodpovednosť bez viny a vrátime sa do vlastnej moci.",
+          },
+          {
+            timeOrIcon: "🧍‍♀️",
+            title: "Workshop 2 – Zdravá chôdza",
+            description: "Anatómia chôdze a vedomie SEBA SAMÉHO, ktoré ťa prepojí s tvojou centrálnou osou.",
+          },
+        ],
+      },
+    ],
+    bonus: {
+      title: "✨ BONUS NA UKONČENIE: Liečivý jaskynný kúpeľ v Sklených Tepliciach – Parenica",
+      description: "Po záverečnom kruhu v nedeľu si spolu zájdeme do unikátneho liečivého jaskynného kúpeľa v Sklených Tepliciach – Parenica – pre doplnkový zážitok na úplné uvoľnenie a hlbokú regeneráciu nervového systému 🤍.",
+    },
+    sk: {
+      title: "3. Mini-Metamorfóza: Víkendový pobyt na Slovensku",
+      subtitle: "🦋 Návrat tela do bezpečia – uvoľnenie traumy & návrat moci k SEBE SAMÉMU 🦋",
+      intro: "Milá duša 🌿, prečo klasické krémy, kozmetika ani bežné cvičenie nestačia na to, aby si sa cítila skutočne krásna a uvoľnená, kým tvoj nervový systém necíti BEZPEČIE? Skutočná krása nevychádza zvonku. Vychádza zvnútra – z tvojho pokoja. Žena má v sebe prirodzenú pokojnosť a láskyplnosť, no v kolotoči povinností a stresu na to často zabúdame. Naše telo sa prepne do režimu prežitia, trauma (či už malá alebo veľká) sa zapíše do našich buniek, fascií a nervového systému. Prestaneš sa cítiť vo vlastnom tele doma. A to je presne to, prečo sme tu. Pozývam ťa na 3. Mini-Metamorfózu – Transformačný ženský víkend, ktorý sa uskutoční 20. 11. – 22. 11. 2026 (áno, 2026!) v čarovnom prostredí Prameni Života pri Lučenci. Príď presne taká, aká si. Nie je čo robiť, len sa uvoľniť do bezpečia a dovoliť si transformáciu. Teším sa na teba, Zuzana 🤍",
+      categoryLabel: "Víkendový pobyt",
+      formatOrDates: "20. 11. – 22. 11. 2026",
+      location: "Prameni Života pri Lučenci + Sklené Teplice (Parenica)",
+      duration: "Piatok až Nedeľa (3 dni)",
+      features: [
+        "Piatok: Príchod & Bezpečie – spomalenie nervového systému, ticho a prvý kontakt s telom",
+        "Sobota ráno: Smile Yoga pre reguláciu nervového systému cez jemnosť, dych a prítomnosť",
+        "Sobota: Workshop 1 – Kostrčovo-lonový dych (prirodzený dych dieťaťa a uvoľnenie panvového dna)",
+        "Sobota: Prednáška – Fasciálny systém: pamäť traumy (bolesť, chrbtica, kĺby, skolióza, halux a vrásky)",
+        "Sobota: Meditácia „Prebuď sa k SEBE SAMÉMU“ & vedomá uzemňujúca prechádzka lesom",
+        "Sobotný vrchol: Zvukový kúpeľ – koncert pre parasympatikus v podaní Mateja Jurenku",
+        "Knižná predpremiéra: Exkluzívne znalosti z novej knihy Zuzany (vydanie koncom novembra)",
+        "Nedeľa: Smile Yoga s prvkami EL metódy (Energetic Lifting) & Prednáška o opustení role obete",
+        "Nedeľa: Workshop 2 – Zdravá chôdza, anatómia chôdze a prepojenie s centrálnou osou",
+        "✨ BONUS NA UKONČENIE: Unikátny liečivý jaskynný kúpeľ v Sklených Tepliciach – Parenica",
+      ],
+      details: [
+        { label: "Termín", value: "20. 11. – 22. 11. 2026 (Piatok – Nedeľa)" },
+        { label: "Miesto", value: "Prameni Života pri Lučenci" },
+        { label: "Zakončenie", value: "Liečivý jaskynný kúpeľ Parenica, Sklené Teplice" },
+        { label: "Zvukový hosť", value: "Matej Jurenka (Zvukový kúpeľ pre parasympatikus)" },
+        { label: "Kniha", value: "Predpremiéra novej knihy Zuzany" },
+        { label: "Kontakt", value: "zuzanab@gmx.at" },
+      ],
+      actionLabel: "Rezervovať miesto na víkend",
+    },
+    de: {
+      title: "3. Mini-Metamorphosis: Wochenende-Retreat in der Slowakei",
+      subtitle: "🦋 Rückkehr des Körpers in die Sicherheit – Traumalösung & Rückkehr zur eigenen KRAFT 🦋",
+      intro: "Liebe Seele 🌿, warum reichen herkömmliche Cremes, Kosmetik oder normales Training nicht aus, damit du dich wirklich schön und entspannt fühlst, solange dein Nervensystem keine SICHERHEIT spürt? Wahre Schönheit kommt nicht von außen. Sie kommt von innen – aus deiner Ruhe. Unser Körper schaltet in den Überlebensmodus, Trauma schreibt sich in unsere Zellen, Faszien und Nervenbahnen ein. Ich lade dich herzlich ein zum 3. Mini-Metamorphosis Transformations-Wochenende vom 20. 11. – 22. 11. 2026 in der magischen Umgebung von Prameni Života bei Lučenec. Komm genau so, wie du bist. Es gibt nichts zu tun, außer sich in die Sicherheit fallen zu lassen und die Verwandlung zu erlauben. Ich freue mich auf dich, Zuzana 🤍",
+      categoryLabel: "Wochenend-Retreat",
+      formatOrDates: "20. 11. – 22. 11. 2026",
+      location: "Prameni Života bei Lučenec + Höhlenbad Sklené Teplice (Parenica)",
+      duration: "Freitag bis Sonntag (3 Tage)",
+      features: [
+        "Freitag: Ankunft & Sicherheit – Verlangsamung des Nervensystems und erster Körperkontakt",
+        "Samstag: Smile Yoga & Workshop 1 – Steißbein-Schambein-Atmung (natürlicher Atem des Kindes & Traumalösung)",
+        "Samstag: Fasziensystem als Traumaspeicher (Faszien, Haltung, Gelenke und Falten)",
+        "Samstag: Meditation „Erwache zu DIR SELBST“ & achtsamer Waldspaziergang",
+        "Samstag-Höhepunkt: Klangbad – Konzert für den Parasympathikus von Matej Jurenka",
+        "Buch-Vorpremiere: Exklusive Einblicke in das neue Buch von Zuzana Harvalik",
+        "Sonntag: Smile Yoga mit Elementen der EL-Methode (Energetic Lifting) & Raus aus der Opferrolle",
+        "Sonntag: Workshop 2 – Gesundes Gehen & Ausrichtung auf die zentrale Achse",
+        "✨ Bonus: Abschluss im heilsamen Höhlen-Thermalbad Parenica in Sklené Teplice",
+      ],
+      details: [
+        { label: "Termin", value: "20. 11. – 22. 11. 2026" },
+        { label: "Ort", value: "Prameni Života bei Lučenec" },
+        { label: "Thermalbad", value: "Höhlenbad Parenica, Sklené Teplice" },
+        { label: "Gast", value: "Matej Jurenka (Klangbad)" },
+        { label: "Kontakt", value: "zuzanab@gmx.at" },
+      ],
+      actionLabel: "Platz reservieren",
+    },
+  },
+  {
     id: "metamorphosis-pobyt-grecko",
     slug: "metamorphosis-pobyt-grecko",
     category: "retreat",
@@ -135,55 +316,6 @@ export const productsData: ProductItem[] = [
         { label: "Termine", value: "Juni / September" },
       ],
       actionLabel: "Retreat anfragen",
-    },
-  },
-  {
-    id: "mini-metamorphosis-slovensko",
-    slug: "mini-metamorphosis-slovensko",
-    category: "retreat",
-    badge: "Intenzívny víkend",
-    image: "/Fotky/IMG_7721.JPG",
-    sk: {
-      title: "Mini Metamorphosis: Víkendový pobyt na Slovensku",
-      subtitle: "Intenzívny regeneračný víkend parasympatického tréningu, liečenia a nového nasmerovania",
-      intro: "Cítiš, že tvoje telo potrebuje zastaviť, nadýchnuť sa a dobiť batérie práve teraz? Tento víkendový pobyt funguje ako tvoj ochranný kukol a nesie rovnaké hlboké posolstvo: Bezpečie je nová krása.",
-      categoryLabel: "Víkendový pobyt",
-      formatOrDates: "Február / Apríl / November",
-      location: "Slovensko",
-      duration: "Piatok až Nedeľa (3 dni)",
-      features: [
-        "Workshopy anatómie chôdze a kostrčovo-panvového dýchania pre uvoľnenie panvového dna",
-        "Fasciálne a somatické techniky pre obnovu elasticity tkanív",
-        "Hydratácia fasciálnej tekutiny a okamžitá úľava od stresu",
-        "Návrat k sebe: Praktické postupy, ako utíšiť myseľ a získať ľahkosť",
-      ],
-      details: [
-        { label: "Trvanie", value: "Piatok – Nedeľa" },
-        { label: "Termíny", value: "Február / Apríl / November" },
-        { label: "Miesto", value: "Slovensko" },
-      ],
-      actionLabel: "Mám záujem o víkend",
-    },
-    de: {
-      title: "Mini Metamorphosis: Wochenende-Retreat in der Slowakei",
-      subtitle: "Intensives Regenerations-Wochenende mit parasympathischem Training, Heilung und neuer Ausrichtung",
-      intro: "Spürst du, dass dein Körper genau jetzt innehalten, durchatmen und seine Batterien aufladen muss? Dieses Wochenend-Retreat wirkt wie dein schützender Kokon und trägt dieselbe Botschaft: Sicherheit ist die neue Schönheit.",
-      categoryLabel: "Wochenend-Retreat",
-      formatOrDates: "Februar / April / November",
-      location: "Slowakei",
-      duration: "Freitag bis Sonntag (3 Tage)",
-      features: [
-        "Workshops zur Anatomie des Gehens & Steißbein-Becken-Atmung",
-        "Fasziale und somatische Techniken zur Wiederherstellung der Gewebeelastizität",
-        "Hydratation der Faszienflüssigkeit und sofortige Stressbefreiung",
-        "Rückkehr zu dir selbst: Methoden zur Beruhigung des Geistes",
-      ],
-      details: [
-        { label: "Dauer", value: "Freitag – Sonntag" },
-        { label: "Termine", value: "Februar / April / November" },
-        { label: "Ort", value: "Slowakei" },
-      ],
-      actionLabel: "Wochenende anfragen",
     },
   },
   {

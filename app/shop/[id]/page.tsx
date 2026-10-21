@@ -8,7 +8,8 @@ export function generateStaticParams() {
 
 export default async function ProgramPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const product = productsData.find((p) => p.slug === id || p.id === id)
+  const targetId = id === "3-mini-metamorfoza-lucenec-2026" ? "mini-metamorphosis-slovensko" : id
+  const product = productsData.find((p) => p.slug === targetId || p.id === targetId || p.slug === id)
 
   if (!product) notFound()
 

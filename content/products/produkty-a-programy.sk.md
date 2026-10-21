@@ -32,17 +32,31 @@ Celá cesta je štruktúrovaná do hlbokej transformácie cez 7 čakier a 7 nov�
 
 ---
 
-## 3. Mini Metamorphosis: Víkendový pobyt na Slovensku
-**Intenzívny regeneračný víkend parasympatického tréningu, liečenia a nového nasmerovania**
+## 3. Mini Metamorphosis: Víkendový pobyt na Slovensku (3. Ročník)
+**🦋 Návrat tela do bezpečia – uvoľnenie traumy & návrat moci k SEBE SAMÉMU 🦋**
 
-Cítiš, že tvoje telo potrebuje zastaviť, nadýchnuť sa a dobiť batérie práve teraz? Tento víkendový pobyt funguje ako tvoj ochranný kukol a nesie rovnaké hlboké posolstvo: Bezpečie je nová krása. Ide o intenzívny parasympatický a fasciálny tréning, kde sa vraciam k samotnej podstate liečenia, omladzovania a skutočného uvoľnenia.
+Milá duša 🌿, prečo klasické krémy, kozmetika ani bežné cvičenie nestačia na to, aby si sa cítila skutočne krásna a uvoľnená, kým tvoj nervový systém necíti BEZPEČIE? Skutočná krása nevychádza zvonku. Vychádza zvnútra – z tvojho pokoja. Žena má v sebe prirodzenú pokojnosť a láskyplnosť, no v kolotoči povinností a stresu na to často zabúdame. Naše telo sa prepne do režimu prežitia, trauma (či už malá alebo veľká) sa zapíše do našich buniek, fascií a nervového systému. Prestaneš sa cítiť vo vlastnom tele doma. A to je presne to, prečo sme tu.
 
-Počas troch dní si pripomenieš, aké to je žiť v prirodzenom stave bytia – v pokoji, čistom vnímaní a regenerácii. Naučíš sa prevziať zodpovednosť za svoj život a svoje nástroje (telo, myšlienky, emócie):
-* **Workshopy anatómie chôdze a kostrčovo-panvového dýchania:** Pre uvoľnenie blokád v panvovom dne a spodnom chrbte.
-* **Fasciálne a somatické techniky:** Pre obnovu elasticity tkanív, hydratáciu fasciálnej tekutiny a okamžitú úľavu od stresu.
-* **Návrat k sebe:** Praktické postupy, ako utíšiť myseľ a odchádzať domov s ľahkosťou v tele aj na tvári.
-* **Trvanie:** Piatok až Nedeľa
-* **Termíny:** Február / Apríl / November
+Pozývam ťa na **3. Mini-Metamorfózu – Transformačný ženský víkend**, ktorý sa uskutoční **20. 11. – 22. 11. 2026** (áno, 2026!) v čarovnom prostredí **Prameni Života pri Lučenci**.
+
+### Program plný hĺbky, znalostí a uvoľnenia:
+* **Piatok – Príchod & Bezpečie:** Začneme spomalením nervového systému, tichom a prvým kontaktom s telom. Spoznáš, ako tvoje vedomie a telo spolu súvisia a ako trauma vytvára stav prežitia.
+* **Sobota – Trauma v tele & Prebudenie k SEBE SAMÉMU:**
+  - 🌞 **Smile Yoga:** Ranné uvoľnenie pre reguláciu nervového systému cez jemnosť, dych a prítomnosť.
+  - 🧘‍♀️ **Workshop 1 – Kostrčovo-lonový dych:** Naučíme sa kostrčovo-panvové dýchanie, prirodzený dych dieťaťa. Uvoľníme panvové dno a kontrolu, čím definitívne pustíme z tela staré traumy a neprežitú energiu.
+  - 🔸 **Prednáška – Fasciálny systém: pamäť traumy:** Odhalíme, ako bolesť, chrbtica, kĺby, skolióza, halux, držanie tela a dokonca VRÁSKY súvisia s tvojím fasciálnym systémom a prečo sú fascie tvojou ochranou, nie chybou.
+  - 🕊 **Meditácia „Prebuď sa k SEBE SAMÉMU“** a vedomá uzemňujúca prechádzka lesom.
+  - 🎶 **SOBOTNÝ VRCHOL: Zvukový kúpeľ – koncert pre parasympatikus** v podaní Mateja Jurenku (v čase výnimočnej konštelácie na Nebi) a následné filozofovanie v strede lesa.
+  - 📖 **Knižná predpremiéra:** Počas víkendu ťa obohatím o exkluzívne znalosti z mojej novej knihy, ktorej vydanie sa blíži koncom novembra!
+* **Nedeľa – Integrácia & Moc:**
+  - 🌞 **Smile Yoga s prvkami EL metódy (Energetic Lifting):** Autorský myofasciálny a neurosomatický tréning, zameraný na prácu s hlbokými fasciálnymi líniami a autonómnym nervovým systémom. Spolu si spomenieme, že krása vychádza zvnútra.
+  - 🔸 **Prednáška – Opustenie role obete:** Preberieme zodpovednosť bez viny a vrátime sa do vlastnej moci.
+  - 🧍‍♀️ **Workshop 2 – Zdravá chôdza:** Anatómia chôdze a vedomie SEBA SAMÉHO, ktoré ťa prepojí s tvojou centrálnou osou.
+* ✨ **BONUS NA UKONČENIE:** Po záverečnom kruhu v nedeľu si spolu zájdeme do unikátneho liečivého jaskynného kúpeľa v Sklených Tepliciach – **Parenica** – pre doplnkový zážitok na úplné uvoľnenie a hlbokú regeneráciu nervového systému 🤍.
+
+* **Termín:** 20. 11. – 22. 11. 2026
+* **Miesto:** Prameni Života pri Lučenci + Sklené Teplice
+* **Kontakt:** zuzanab@gmx.at | Facebook: Zuzana Harvalik Bujdakova | Instagram: @meta_morphos_is
 
 ---
 

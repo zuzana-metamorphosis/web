@@ -2,19 +2,50 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Search } from "lucide-react"
+import { Menu, X, Search, Sparkles, ArrowRight } from "lucide-react"
 import { useSearch } from "./search-context"
 
-export function Header() {
+interface HeaderProps {
+  showAnnouncement?: boolean
+}
+
+export function Header({ showAnnouncement = false }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { openSearch } = useSearch()
 
   return (
-    <header className="fixed top-0 left-0 z-50 px-4 pt-4">
-      <nav
-        className="w-fit px-6 lg:px-8 backdrop-blur-md rounded-lg py-0 my-0 animate-scale-fade-in bg-[rgba(255,255,255,0.4)] border border-[rgba(255,255,255,0.32)]"
-        style={{ boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 50px' }}
-      >
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* Luxury Champagne Ribbon (Option 3) */}
+      {showAnnouncement && (
+        <div className="w-full bg-[#FAF7F2]/95 dark:bg-[#1A1816]/95 backdrop-blur-md border-b border-[#E8E1D5] dark:border-[#2C2722] text-[#4A4036] dark:text-[#E2DAD1] px-4 py-2 transition-all">
+          <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 text-xs">
+            <div className="flex items-center gap-2.5 mx-auto lg:mx-0">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#EFE8DD] dark:bg-[#2C2621] text-[#8C6239] dark:text-[#D4A373] font-semibold text-[10px] tracking-widest uppercase">
+                <Sparkles className="w-3 h-3 text-[#A87B51]" /> 20. – 22. 11. 2026
+              </span>
+              <span className="font-serif tracking-wide text-xs sm:text-sm text-[#3D352E]/90 dark:text-stone-200">
+                3. Mini-Metamorfóza: Návrat tela do bezpečia · Prameni Života pri Lučenci
+              </span>
+            </div>
+
+            <div className="hidden lg:flex items-center gap-4">
+              <Link
+                href="/shop/mini-metamorphosis-slovensko"
+                className="inline-flex items-center gap-1 text-xs font-semibold text-[#8C6239] dark:text-[#D4A373] hover:underline underline-offset-4 transition-colors"
+              >
+                <span>Program & Rezervácia</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className={`px-4 ${showAnnouncement ? 'pt-2.5' : 'pt-4'}`}>
+        <nav
+          className="w-fit px-6 lg:px-8 backdrop-blur-md rounded-lg py-0 my-0 animate-scale-fade-in bg-[rgba(255,255,255,0.4)] border border-[rgba(255,255,255,0.32)]"
+          style={{ boxShadow: 'rgba(0, 0, 0, 0.1) 0px 10px 50px' }}
+        >
         <div className="flex items-center gap-6 lg:gap-8 h-[68px]">
           {/* Mobile menu button */}
           <button
@@ -120,6 +151,7 @@ export function Header() {
           </div>
         </div>
       </nav>
+      </div>
     </header>
   )
 }

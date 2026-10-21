@@ -1,9 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, CheckCircle2, Globe, Sparkles, Send, MapPin, Calendar, BookOpen } from "lucide-react"
+import { ArrowLeft, CheckCircle2, Globe, Sparkles, Send, MapPin, Calendar, BookOpen, Mail, Facebook, Instagram, Play, Pause, Volume2, VolumeX } from "lucide-react"
 import { Header } from "@/components/boty/header"
 import { Footer } from "@/components/boty/footer"
 import { ProductItem } from "@/lib/products-data"
@@ -11,8 +11,30 @@ import { ProductItem } from "@/lib/products-data"
 export function ProgramDetailView({ product }: { product: ProductItem }) {
   const [lang, setLang] = useState<"sk" | "de">("sk")
   const [selectedVariant, setSelectedVariant] = useState<number>(0)
+  const [isPlaying, setIsPlaying] = useState<boolean>(true)
+  const [isMuted, setIsMuted] = useState<boolean>(true)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   const content = lang === "de" ? product.de : product.sk
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause()
+        setIsPlaying(false)
+      } else {
+        videoRef.current.play()
+        setIsPlaying(true)
+      }
+    }
+  }
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted
+      setIsMuted(!isMuted)
+    }
+  }
 
   return (
     <main className="min-h-screen bg-background">
@@ -160,15 +182,139 @@ export function ProgramDetailView({ product }: { product: ProductItem }) {
                   <Send className="w-4 h-4" />
                   <span>{content.actionLabel}</span>
                 </Link>
-                <Link
-                  href="/kontakt"
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-card border border-border text-foreground font-medium text-sm hover:bg-muted transition-colors"
-                >
-                  {lang === "sk" ? "Mám otázku / Konzultácia" : "Frage stellen"}
-                </Link>
+                {product.contact?.email ? (
+                  <a
+                    href={`mailto:${product.contact.email}?subject=${encodeURIComponent(`Rezervácia: ${content.title}`)}`}
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-card border border-border text-foreground font-medium text-sm hover:bg-muted transition-colors"
+                  >
+                    <Mail className="w-4 h-4 text-primary" />
+                    <span>{product.contact.email}</span>
+                  </a>
+                ) : (
+                  <Link
+                    href="/kontakt"
+                    className="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-card border border-border text-foreground font-medium text-sm hover:bg-muted transition-colors"
+                  >
+                    {lang === "sk" ? "Mám otázku / Konzultácia" : "Frage stellen"}
+                  </Link>
+                )}
               </div>
             </div>
           </div>
+
+          {/* Video Section if available */}
+          {product.video && (
+            <div className="mt-20 rounded-3xl bg-card border border-border/70 p-6 sm:p-10 overflow-hidden shadow-xs">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+                <div>
+                  <span className="text-xs uppercase tracking-[0.25em] text-primary font-semibold">
+                    {lang === "sk" ? "Video Atmosféra" : "Video Atmosphäre"}
+                  </span>
+                  <h2 className="font-serif text-2xl sm:text-3xl text-foreground mt-1">
+                    {product.video.title || (lang === "sk" ? "Nahliadnite do atmosféry pobytu" : "Einblick in die Atmosphäre")}
+                  </h2>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={togglePlay}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted hover:bg-muted/80 text-foreground text-xs font-medium transition"
+                  >
+                    {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+                    <span>{isPlaying ? (lang === "sk" ? "Pozastaviť" : "Pause") : (lang === "sk" ? "Prehrať" : "Abspielen")}</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={toggleMute}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted hover:bg-muted/80 text-foreground text-xs font-medium transition"
+                  >
+                    {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+                    <span>{isMuted ? (lang === "sk" ? "Zapnúť zvuk" : "Ton an") : (lang === "sk" ? "Stlmiť" : "Stumm")}</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="relative aspect-16/9 sm:aspect-21/9 w-full rounded-2xl overflow-hidden bg-black/90 border border-black/10">
+                <video
+                  ref={videoRef}
+                  src={product.video.url}
+                  poster={product.video.poster}
+                  autoPlay
+                  loop
+                  muted={isMuted}
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white/90 text-xs sm:text-sm font-sans drop-shadow-md pointer-events-none">
+                  <span>{lang === "sk" ? "Uvoľnenie tela · Bezpečie je nová krása" : "Körperentspannung · Sicherheit ist Schönheit"}</span>
+                  <span className="font-mono text-xs opacity-75">HD · 1080p</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Schedule / Harmonogram if available */}
+          {product.schedule && product.schedule.length > 0 && (
+            <div className="mt-20">
+              <div className="text-center max-w-2xl mx-auto mb-12">
+                <span className="text-xs uppercase tracking-[0.3em] text-primary font-semibold">
+                  {lang === "sk" ? "Harmonogram víkendu" : "Wochenend-Ablauf"}
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl text-foreground mt-2">
+                  {lang === "sk" ? "Program plný hĺbky, znalostí a uvoľnenia" : "Programm voller Tiefe & Entspannung"}
+                </h2>
+              </div>
+
+              <div className="grid gap-8 lg:grid-cols-3">
+                {product.schedule.map((dayPlan, dayIdx) => (
+                  <div
+                    key={dayIdx}
+                    className="flex flex-col rounded-3xl bg-card border border-border/70 p-6 sm:p-7 shadow-xs hover:border-primary/40 transition-all"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">
+                        {dayPlan.day}
+                      </span>
+                    </div>
+                    <h3 className="font-serif text-xl sm:text-2xl text-foreground mb-6">
+                      {dayPlan.title}
+                    </h3>
+
+                    <div className="space-y-4 flex-1">
+                      {dayPlan.items.map((item, itemIdx) => (
+                        <div key={itemIdx} className="p-4 rounded-2xl bg-muted/40 border border-border/40">
+                          <div className="flex items-center gap-2 mb-1">
+                            {item.timeOrIcon && <span className="text-base">{item.timeOrIcon}</span>}
+                            <h4 className="font-semibold text-xs sm:text-sm text-foreground">{item.title}</h4>
+                          </div>
+                          <p className="text-xs text-muted-foreground leading-relaxed">{item.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Bonus Highlight Card if available */}
+          {product.bonus && (
+            <div className="mt-12 rounded-3xl bg-gradient-to-br from-primary/15 via-card to-primary/5 border border-primary/30 p-8 sm:p-10 shadow-sm relative overflow-hidden">
+              <div className="relative z-10 max-w-3xl">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold mb-3">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  {lang === "sk" ? "Exkluzívny zážitok" : "Exklusives Erlebnis"}
+                </span>
+                <h3 className="font-serif text-2xl sm:text-3xl text-foreground mb-3">
+                  {product.bonus.title}
+                </h3>
+                <p className="text-sm sm:text-base text-foreground/85 leading-relaxed">
+                  {product.bonus.description}
+                </p>
+              </div>
+            </div>
+          )}
 
           {/* Detailed Features & Program Curriculum */}
           {content.features && content.features.length > 0 && (
@@ -189,6 +335,82 @@ export function ProgramDetailView({ product }: { product: ProductItem }) {
               </div>
             </div>
           )}
+
+          {/* Direct Contact & Social Section */}
+          {product.contact && (
+            <div className="mt-16 rounded-3xl bg-card border border-border/70 p-8 sm:p-12">
+              <div className="max-w-2xl">
+                <span className="text-xs uppercase tracking-[0.25em] text-primary font-semibold">
+                  {lang === "sk" ? "Osobné spojenie & Otázky" : "Persönlicher Kontakt"}
+                </span>
+                <h2 className="font-serif text-2xl sm:text-4xl text-foreground mt-2 mb-4">
+                  {lang === "sk" ? "Máš otázku alebo si chceš rezervovať miesto?" : "Fragen oder Platz reservieren?"}
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-8">
+                  {lang === "sk"
+                    ? "Napíš mi priamo e-mailom alebo ma kontaktuj cez sociálne siete. Rada ti zodpoviem akékoľvek otázky ohľadom programu, ubytovania alebo individuálnych potrieb."
+                    : "Schreib mir direkt per E-Mail oder über soziale Medien. Ich beantworte gerne all deine Fragen."}
+                </p>
+
+                <div className="grid sm:grid-cols-3 gap-4">
+                  {product.contact.email && (
+                    <a
+                      href={`mailto:${product.contact.email}?subject=${encodeURIComponent(`Dopyt: ${content.title}`)}`}
+                      className="flex items-center gap-3 p-4 rounded-2xl bg-muted/50 hover:bg-primary/10 border border-border hover:border-primary/40 transition group"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center shrink-0">
+                        <Mail className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="overflow-hidden">
+                        <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">E-mail</p>
+                        <p className="text-xs sm:text-sm font-medium text-foreground truncate group-hover:text-primary transition-colors">
+                          {product.contact.email}
+                        </p>
+                      </div>
+                    </a>
+                  )}
+
+                  {product.contact.facebook && (
+                    <a
+                      href={product.contact.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 rounded-2xl bg-muted/50 hover:bg-primary/10 border border-border hover:border-primary/40 transition group"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center shrink-0">
+                        <Facebook className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="overflow-hidden">
+                        <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Facebook</p>
+                        <p className="text-xs sm:text-sm font-medium text-foreground truncate group-hover:text-primary transition-colors">
+                          {product.contact.facebookName || "Zuzana Harvalik"}
+                        </p>
+                      </div>
+                    </a>
+                  )}
+
+                  {product.contact.instagram && (
+                    <a
+                      href={product.contact.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 rounded-2xl bg-muted/50 hover:bg-primary/10 border border-border hover:border-primary/40 transition group"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center shrink-0">
+                        <Instagram className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="overflow-hidden">
+                        <p className="text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">Instagram</p>
+                        <p className="text-xs sm:text-sm font-medium text-foreground truncate group-hover:text-primary transition-colors">
+                          {product.contact.instagramName || "@meta_morphos_is"}
+                        </p>
+                      </div>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
@@ -196,3 +418,4 @@ export function ProgramDetailView({ product }: { product: ProductItem }) {
     </main>
   )
 }
+
