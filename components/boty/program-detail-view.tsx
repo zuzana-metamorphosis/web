@@ -3,7 +3,7 @@
 import { useState, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, CheckCircle2, Globe, Sparkles, Send, MapPin, Calendar, BookOpen, Mail, Facebook, Instagram, Play, Pause, Volume2, VolumeX } from "lucide-react"
+import { ArrowLeft, ArrowUpRight, CheckCircle2, Globe, Sparkles, Send, MapPin, Calendar, BookOpen, Mail, Facebook, Instagram, Play, Pause, Volume2, VolumeX } from "lucide-react"
 import { Header } from "@/components/boty/header"
 import { Footer } from "@/components/boty/footer"
 import { ProductItem } from "@/lib/products-data"
@@ -114,9 +114,19 @@ export function ProgramDetailView({ product }: { product: ProductItem }) {
                 </p>
               </div>
 
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                {content.intro}
-              </p>
+              {content.introParagraphs && content.introParagraphs.length > 0 ? (
+                <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  {content.introParagraphs.map((para, pIdx) => (
+                    <p key={pIdx}>{para}</p>
+                  ))}
+                </div>
+              ) : (
+                <div className="space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {content.intro.split("\n\n").map((para, pIdx) => (
+                    <p key={pIdx}>{para}</p>
+                  ))}
+                </div>
+              )}
 
               {/* Meta details badges */}
               <div className="flex flex-wrap gap-3 pt-2">
@@ -214,43 +224,85 @@ export function ProgramDetailView({ product }: { product: ProductItem }) {
                     {product.video.title || (lang === "sk" ? "Nahliadnite do atmosféry pobytu" : "Einblick in die Atmosphäre")}
                   </h2>
                 </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={togglePlay}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted hover:bg-muted/80 text-foreground text-xs font-medium transition"
+                {product.video.isFacebook ? (
+                  <a
+                    href={product.video.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-medium hover:opacity-90 shadow-xs transition-opacity"
                   >
-                    {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-                    <span>{isPlaying ? (lang === "sk" ? "Pozastaviť" : "Pause") : (lang === "sk" ? "Prehrať" : "Abspielen")}</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={toggleMute}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted hover:bg-muted/80 text-foreground text-xs font-medium transition"
-                  >
-                    {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
-                    <span>{isMuted ? (lang === "sk" ? "Zapnúť zvuk" : "Ton an") : (lang === "sk" ? "Stlmiť" : "Stumm")}</span>
-                  </button>
-                </div>
+                    <Facebook className="w-4 h-4" />
+                    <span>{lang === "sk" ? "Pozrieť Reel na Facebooku" : "Reel auf Facebook ansehen"}</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={togglePlay}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted hover:bg-muted/80 text-foreground text-xs font-medium transition"
+                    >
+                      {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+                      <span>{isPlaying ? (lang === "sk" ? "Pozastaviť" : "Pause") : (lang === "sk" ? "Prehrať" : "Abspielen")}</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={toggleMute}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted hover:bg-muted/80 text-foreground text-xs font-medium transition"
+                    >
+                      {isMuted ? <VolumeX className="w-3.5 h-3.5" /> : <Volume2 className="w-3.5 h-3.5" />}
+                      <span>{isMuted ? (lang === "sk" ? "Zapnúť zvuk" : "Ton an") : (lang === "sk" ? "Stlmiť" : "Stumm")}</span>
+                    </button>
+                  </div>
+                )}
               </div>
 
-              <div className="relative aspect-16/9 sm:aspect-21/9 w-full rounded-2xl overflow-hidden bg-black/90 border border-black/10">
-                <video
-                  ref={videoRef}
-                  src={product.video.url}
-                  poster={product.video.poster}
-                  autoPlay
-                  loop
-                  muted={isMuted}
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white/90 text-xs sm:text-sm font-sans drop-shadow-md pointer-events-none">
-                  <span>{lang === "sk" ? "Uvoľnenie tela · Bezpečie je nová krása" : "Körperentspannung · Sicherheit ist Schönheit"}</span>
-                  <span className="font-mono text-xs opacity-75">HD · 1080p</span>
+              {product.video.isFacebook ? (
+                <div className="flex flex-col items-center">
+                  <div className="relative w-full max-w-md aspect-9/16 rounded-2xl overflow-hidden bg-black shadow-lg border border-border/80">
+                    <iframe
+                      src={product.video.embedUrl || "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1474731324468861%2F&show_text=0"}
+                      width="100%"
+                      height="100%"
+                      style={{ border: "none", overflow: "hidden" }}
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="w-full h-full"
+                      title={product.video.title}
+                    />
+                  </div>
+                  <div className="mt-4 flex flex-col sm:flex-row items-center justify-between w-full max-w-md gap-3 px-2 text-xs text-muted-foreground">
+                    <span>{lang === "sk" ? "Video pozvánka Zuzany na 3. Mini-Metamorfózu" : "Video-Einladung von Zuzana"}</span>
+                    <a
+                      href={product.video.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-primary hover:underline font-medium"
+                    >
+                      <span>{lang === "sk" ? "Priamy odkaz na Facebook" : "Direkter Link zu Facebook"}</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="relative aspect-16/9 sm:aspect-21/9 w-full rounded-2xl overflow-hidden bg-black/90 border border-black/10">
+                  <video
+                    ref={videoRef}
+                    src={product.video.url}
+                    poster={product.video.poster}
+                    autoPlay
+                    loop
+                    muted={isMuted}
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white/90 text-xs sm:text-sm font-sans drop-shadow-md pointer-events-none">
+                    <span>{lang === "sk" ? "Uvoľnenie tela · Bezpečie je nová krása" : "Körperentspannung · Sicherheit ist Schönheit"}</span>
+                    <span className="font-mono text-xs opacity-75">HD · 1080p</span>
+                  </div>
+                </div>
+              )}
             </div>
           )}
 

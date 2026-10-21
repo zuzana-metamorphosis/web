@@ -10,8 +10,10 @@ export interface ProductItem {
   currencyCode?: string
   video?: {
     url: string
+    embedUrl?: string
     title?: string
     poster?: string
+    isFacebook?: boolean
   }
   contact?: {
     email?: string
@@ -37,6 +39,7 @@ export interface ProductItem {
     title: string
     subtitle: string
     intro: string
+    introParagraphs?: string[]
     categoryLabel: string
     formatOrDates?: string
     location?: string
@@ -50,6 +53,7 @@ export interface ProductItem {
     title: string
     subtitle: string
     intro: string
+    introParagraphs?: string[]
     categoryLabel: string
     formatOrDates?: string
     location?: string
@@ -115,11 +119,6 @@ export const productsData: ProductItem[] = [
     category: "retreat",
     badge: "Najbližší termín · 20. – 22. 11. 2026",
     image: "/Fotky/IMG_7721.JPG",
-    video: {
-      url: "/images/hero-amber.mp4",
-      title: "Atmosféra pokoja, bezpečia a somatického uvoľnenia",
-      poster: "/Fotky/IMG_7721.JPG",
-    },
     contact: {
       email: "zuzanab@gmx.at",
       facebook: "https://www.facebook.com/people/Zuzana-Harvalik-Bujdakova/",
@@ -209,7 +208,17 @@ export const productsData: ProductItem[] = [
     sk: {
       title: "3. Mini-Metamorfóza: Víkendový pobyt na Slovensku",
       subtitle: "🦋 Návrat tela do bezpečia – uvoľnenie traumy & návrat moci k SEBE SAMÉMU 🦋",
-      intro: "Milá duša 🌿, prečo klasické krémy, kozmetika ani bežné cvičenie nestačia na to, aby si sa cítila skutočne krásna a uvoľnená, kým tvoj nervový systém necíti BEZPEČIE? Skutočná krása nevychádza zvonku. Vychádza zvnútra – z tvojho pokoja. Žena má v sebe prirodzenú pokojnosť a láskyplnosť, no v kolotoči povinností a stresu na to často zabúdame. Naše telo sa prepne do režimu prežitia, trauma (či už malá alebo veľká) sa zapíše do našich buniek, fascií a nervového systému. Prestaneš sa cítiť vo vlastnom tele doma. A to je presne to, prečo sme tu. Pozývam ťa na 3. Mini-Metamorfózu – Transformačný ženský víkend, ktorý sa uskutoční 20. 11. – 22. 11. 2026 (áno, 2026!) v čarovnom prostredí Prameni Života pri Lučenci. Príď presne taká, aká si. Nie je čo robiť, len sa uvoľniť do bezpečia a dovoliť si transformáciu. Teším sa na teba, Zuzana 🤍",
+      intro: "Milá duša 🌿, prečo klasické krémy, kozmetika ani bežné cvičenie nestačia na to, aby si sa cítila skutočne krásna a uvoľnená, kým tvoj nervový systém necíti BEZPEČIE?\n\nSkutočná krása nevychádza zvonku. Vychádza zvnútra – z tvojho pokoja.\n\nŽena má v sebe prirodzenú pokojnosť a láskyplnosť, no v kolotoči povinností a stresu na to často zabúdame. Naše telo sa prepne do režimu prežitia, trauma (či už malá alebo veľká) sa zapíše do našich buniek, fascií a nervového systému. Prestaneš sa cítiť vo vlastnom tele doma. A to je presne to, prečo sme tu.\n\nPozývam ťa na 3. Mini-Metamorfózu – Transformačný ženský víkend, ktorý sa uskutoční 20. 11. – 22. 11. 2026 (áno, 2026!) v čarovnom prostredí Prameni Života pri Lučenci.\n\nTéma tohto stretnutia je jasná, hlboká a pre teba oslobodzujúca:\n🦋 Návrat tela do bezpečia – uvoľnenie traumy & návrat moci k SEBE SAMÉMU 🦋\n\nPoď s nami na chvíľu vystúpiť z každodenného zhonu, nadýchnuť sa plnými dúškami a spomenúť si na svoj prirodzený stav bytia, ktorým je hlboký pokoj a bezpečie.\n\nPríď presne taká, aká si. Nie je čo robiť, len sa uvoľniť do bezpečia a dovoliť si transformáciu.\n\nTeším sa na teba, Zuzana 🤍",
+      introParagraphs: [
+        "Milá duša 🌿, prečo klasické krémy, kozmetika ani bežné cvičenie nestačia na to, aby si sa cítila skutočne krásna a uvoľnená, kým tvoj nervový systém necíti BEZPEČIE?",
+        "Skutočná krása nevychádza zvonku. Vychádza zvnútra – z tvojho pokoja.",
+        "Žena má v sebe prirodzenú pokojnosť a láskyplnosť, no v kolotoči povinností a stresu na to často zabúdame. Naše telo sa prepne do režimu prežitia, trauma (či už malá alebo veľká) sa zapíše do našich buniek, fascií a nervového systému. Prestaneš sa cítiť vo vlastnom tele doma. A to je presne to, prečo sme tu.",
+        "Pozývam ťa na 3. Mini-Metamorfózu – Transformačný ženský víkend, ktorý sa uskutoční 20. 11. – 22. 11. 2026 (áno, 2026!) v čarovnom prostredí Prameni Života pri Lučenci.",
+        "Téma tohto stretnutia je jasná, hlboká a pre teba oslobodzujúca:\n🦋 Návrat tela do bezpečia – uvoľnenie traumy & návrat moci k SEBE SAMÉMU 🦋",
+        "Poď s nami na chvíľu vystúpiť z každodenného zhonu, nadýchnuť sa plnými dúškami a spomenúť si na svoj prirodzený stav bytia, ktorým je hlboký pokoj a bezpečie.",
+        "Príď presne taká, aká si. Nie je čo robiť, len sa uvoľniť do bezpečia a dovoliť si transformáciu.",
+        "Teším sa na teba, Zuzana 🤍"
+      ],
       categoryLabel: "Víkendový pobyt",
       formatOrDates: "20. 11. – 22. 11. 2026",
       location: "Prameni Života pri Lučenci + Sklené Teplice (Parenica)",

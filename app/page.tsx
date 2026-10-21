@@ -21,16 +21,39 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden bg-[#e3e1e2] pt-32">
+      <section className="relative min-h-[92vh] sm:min-h-screen overflow-hidden bg-[#e3e1e2]">
         <Image src="/Fotky/480785660_624497300225070_1171894858753554870_n.jpg" alt="Portrét autorky" fill priority className="object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-        <div className="relative z-10 mx-auto flex min-h-[calc(90vh-4rem)] max-w-7xl items-end px-6 pb-16 lg:px-8 lg:pb-24">
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/25 to-transparent" />
+        
+        {/* Container: on mobile justify-between (badge at top under header), on desktop justify-end (original bottom placement) */}
+        <div className="relative z-10 mx-auto flex flex-col justify-between lg:justify-end min-h-[92vh] sm:min-h-screen max-w-7xl px-6 pt-24 sm:pt-28 pb-12 sm:pb-16 lg:px-8 lg:pb-24">
+          {/* Mobile Only: Top Floating Pill Badge under header (leaves eyes completely clear on mobile) */}
+          <div className="w-full flex items-start lg:hidden">
+            <Link
+              href="/shop/mini-metamorphosis-slovensko"
+              className="group inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white/90 hover:bg-white backdrop-blur-md border border-white/95 shadow-md transition-all duration-300 max-w-full"
+            >
+              <span className="flex h-2 w-2 relative shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+              </span>
+              <span className="inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-primary shrink-0">
+                <Sparkles className="w-3 h-3" /> 20. – 22. 11. 2026
+              </span>
+              <span className="text-xs font-serif tracking-wide text-foreground font-medium truncate">
+                3. Mini-Metamorfóza (Lučenec)
+              </span>
+              <ArrowRight className="w-3 h-3 text-primary group-hover:translate-x-1 transition-transform shrink-0 ml-0.5" />
+            </Link>
+          </div>
+
+          {/* Bottom Content Area */}
           <div className="max-w-3xl">
-            {/* Elegant Floating Pill Badge for Retreat (Option 1) */}
-            <div className="mb-6">
+            {/* Desktop Only: Original position of Pill Badge right above headline */}
+            <div className="hidden lg:block mb-6">
               <Link
                 href="/shop/mini-metamorphosis-slovensko"
-                className="group inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/85 hover:bg-white backdrop-blur-md border border-white/90 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/85 hover:bg-white backdrop-blur-md border border-white/90 shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 <span className="flex h-2.5 w-2.5 relative shrink-0">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -39,17 +62,17 @@ export default function HomePage() {
                 <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
                   <Sparkles className="w-3.5 h-3.5" /> 20. – 22. 11. 2026
                 </span>
-                <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-foreground/30" />
-                <span className="text-xs sm:text-sm font-serif tracking-wide text-foreground font-medium">
+                <span className="inline-block w-1 h-1 rounded-full bg-foreground/30" />
+                <span className="text-sm font-serif tracking-wide text-foreground font-medium">
                   3. Mini-Metamorfóza (Lučenec)
                 </span>
                 <ArrowRight className="w-3.5 h-3.5 text-primary group-hover:translate-x-1 transition-transform shrink-0" />
               </Link>
             </div>
 
-            <p className="mb-5 text-sm uppercase tracking-[0.3em] text-black/70">Zuzana · Metamorphosis</p>
-            <h1 className="font-serif text-5xl leading-[1.05] text-black md:text-7xl">Miesto pre zmenu, ktorá začína vnútri.</h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-black/75">Nestarneš. Len na sebe nosíš nánosy minulosti, potlačených emócií a kŕč v tkanivách.</p>
+            <p className="mb-3 sm:mb-4 lg:mb-5 text-xs sm:text-sm uppercase tracking-[0.3em] text-black/75 font-medium">Zuzana · Metamorphosis</p>
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl leading-[1.08] text-black">Miesto pre zmenu, ktorá začína vnútri.</h1>
+            <p className="mt-4 sm:mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-black/80 font-normal">Nestarneš. Len na sebe nosíš nánosy minulosti, potlačených emócií a kŕč v tkanivách.</p>
           </div>
         </div>
       </section>
@@ -84,24 +107,33 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Grid: Poetic Letter & Video */}
+          {/* Grid: Poetic Letter & Retreat Card */}
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             {/* Left: Message from Zuzana */}
             <div className="space-y-6">
-              <div className="p-6 sm:p-8 rounded-3xl bg-background/80 border border-border/80 shadow-xs backdrop-blur-xs space-y-4 text-muted-foreground leading-relaxed">
-                <p className="font-serif text-lg text-foreground italic">
+              <div className="p-6 sm:p-8 rounded-3xl bg-background/80 border border-border/80 shadow-xs backdrop-blur-xs space-y-4 text-muted-foreground leading-relaxed text-base sm:text-lg">
+                <p className="font-serif text-lg sm:text-xl text-foreground font-medium italic">
                   „Milá duša 🌿, prečo klasické krémy, kozmetika ani bežné cvičenie nestačia na to, aby si sa cítila skutočne krásna a uvoľnená, kým tvoj nervový systém necíti BEZPEČIE?“
                 </p>
                 <p>
-                  Skutočná krása nevychádza zvonku. Vychádza zvnútra – z tvojho pokoja. Žena má v sebe prirodzenú pokojnosť a láskyplnosť, no v kolotoči povinností a stresu na to často zabúdame. Naše telo sa prepne do režimu prežitia, trauma (či už malá alebo veľká) sa zapíše do našich buniek, fascií a nervového systému. Prestaneš sa cítiť vo vlastnom tele doma.
+                  Skutočná krása nevychádza zvonku. Vychádza zvnútra – z tvojho pokoja.
                 </p>
                 <p>
-                  A to je presne to, prečo sme tu. Poď s nami na chvíľu vystúpiť z každodenného zhonu, nadýchnuť sa plnými dúškami a spomenúť si na svoj prirodzený stav bytia, ktorým je hlboký pokoj a bezpečie.
+                  Žena má v sebe prirodzenú pokojnosť a láskyplnosť, no v kolotoči povinností a stresu na to často zabúdame. Naše telo sa prepne do režimu prežitia, trauma (či už malá alebo veľká) sa zapíše do našich buniek, fascií a nervového systému. Prestaneš sa cítiť vo vlastnom tele doma. A to je presne to, prečo sme tu.
                 </p>
-                <p className="font-medium text-foreground pt-2">
+                <p>
+                  Pozývam ťa na <strong className="text-foreground font-semibold">3. Mini-Metamorfózu – Transformačný ženský víkend</strong>, ktorý sa uskutoční 20. 11. – 22. 11. 2026 v čarovnom prostredí Prameni Života pri Lučenci.
+                </p>
+                <p className="p-3.5 rounded-2xl bg-primary/10 border border-primary/20 text-foreground font-serif text-base italic">
+                  🦋 Téma: Návrat tela do bezpečia – uvoľnenie traumy & návrat moci k SEBE SAMÉMU 🦋
+                </p>
+                <p>
+                  Poď s nami na chvíľu vystúpiť z každodenného zhonu, nadýchnuť sa plnými dúškami a spomenúť si na svoj prirodzený stav bytia, ktorým je hlboký pokoj a bezpečie.
+                </p>
+                <p className="font-medium text-foreground pt-1">
                   Príď presne taká, aká si. Nie je čo robiť, len sa uvoľniť do bezpečia a dovoliť si transformáciu.
                 </p>
-                <p className="font-serif text-foreground italic text-right pt-2">
+                <p className="font-serif text-foreground font-medium italic text-right pt-2">
                   Teším sa na teba, Zuzana 🤍
                 </p>
               </div>
@@ -127,35 +159,41 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: Video & Direct Contact Box */}
+            {/* Right: Retreat Atmospheric Photo Card & Direct Contact Box */}
             <div className="space-y-6">
-              {/* Video Preview Card */}
-              <div className="relative aspect-16/10 rounded-3xl overflow-hidden bg-black shadow-lg border border-border/80 group">
-                <video
-                  src="/images/hero-amber.mp4"
-                  poster="/Fotky/IMG_7721.JPG"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              {/* Image Preview Card */}
+              <div className="relative aspect-4/3 sm:aspect-16/10 rounded-3xl overflow-hidden bg-muted shadow-lg border border-border/80 group">
+                <Image
+                  src="/Fotky/IMG_7721.JPG"
+                  alt="3. Mini-Metamorfóza v Prameni Života"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                <div className="absolute top-5 left-5">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-foreground text-xs font-semibold shadow-xs">
+                    <Sparkles className="w-3.5 h-3.5 text-primary" />
+                    Prameni Života · Lučenec
+                  </span>
+                </div>
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
                   <div>
                     <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[11px] font-semibold uppercase tracking-wider">
-                      Atmosféra
+                      Transformačný víkend
                     </span>
-                    <p className="text-white font-serif text-lg sm:text-xl mt-1 drop-shadow-md">
-                      Prameni Života & Víkend uvoľnenia
+                    <p className="text-white font-serif text-lg sm:text-2xl mt-1 drop-shadow-md">
+                      3. Mini-Metamorfóza
+                    </p>
+                    <p className="text-white/80 text-xs sm:text-sm mt-0.5">
+                      20. 11. – 22. 11. 2026
                     </p>
                   </div>
                   <Link
                     href="/shop/mini-metamorphosis-slovensko"
-                    className="p-3 rounded-full bg-white text-black hover:scale-105 transition-transform shadow-md"
-                    title="Zobraziť detail víkendu"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white text-black hover:bg-white/90 transition-all shadow-md text-xs sm:text-sm font-medium hover:scale-105"
                   >
-                    <ArrowUpRight className="w-5 h-5" />
+                    <span>Harmonogram</span>
+                    <ArrowUpRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
